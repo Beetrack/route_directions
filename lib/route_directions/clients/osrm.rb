@@ -1,4 +1,5 @@
 require 'route_directions/clients/base'
+require 'route_directions/responses/osrm'
 
 module RouteDirections
   module Clients
@@ -17,6 +18,10 @@ module RouteDirections
 
       def parameters
         {}
+      end
+
+      def response_class
+        RouteDirections::Responses::Osrm
       end
 
       private

@@ -1,4 +1,5 @@
 require 'route_directions/clients/base'
+require 'route_directions/responses/google'
 
 module RouteDirections
   module Clients
@@ -19,6 +20,10 @@ module RouteDirections
                                             .join('|')
         end
         required_parameters
+      end
+
+      def response_class
+        RouteDirections::Responses::Google
       end
     end
   end
