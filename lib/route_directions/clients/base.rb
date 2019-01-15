@@ -18,11 +18,11 @@ module RouteDirections
       end
 
       def response_class
-        raise NotImplementedError, 'Called abstract method provided_url'
+        raise NotImplementedError, 'Called abstract method response_class'
       end
 
       def provider_url
-        raise NotImplementedError, 'Called abstract method provided_url'
+        raise NotImplementedError, 'Called abstract method provider_url'
       end
 
       def parameters

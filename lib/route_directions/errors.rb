@@ -7,4 +7,7 @@ module RouteDirections
 
   class DeniedQueryError < StandardError
   end
+
+  class InvalidDataError < StandardError
+  end
 end

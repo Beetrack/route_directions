@@ -25,7 +25,9 @@ module RouteDirections
           raise RouteDirections::NoResultsError, body['status']
         when 'OVER_DAILY_LIMIT', 'OVER_QUERY_LIMIT'
           raise RouteDirections::OverQueryLimitError, body['status']
-        when 'REQUEST_DENIED', 'INVALID_REQUEST'
+        when 'INVALID_REQUEST'
+          raise RouteDirections::InvalidDataError, body['status']
+        when 'REQUEST_DENIED'
           raise RouteDirections::DeniedQueryError, body['status']
         when 'UNKNOWN_ERROR'
           raise StandardError, body['status']
