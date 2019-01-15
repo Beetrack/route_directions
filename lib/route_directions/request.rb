@@ -10,9 +10,9 @@ module RouteDirections
     end
 
     def execute
-      puts 'hola'
-      puts provider_url
-      puts parameters
+      uri = URI(provider_url)
+      uri.query = URI.encode_www_form(parameters) if parameters.any?
+      Net::HTTP.get_response(uri)
     end
   end
 end

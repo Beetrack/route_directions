@@ -1,8 +1,8 @@
-require 'route_directions/providers/client'
+require 'route_directions/clients/base'
 
 module RouteDirections
-  module Providers
-    class Osrm < Client
+  module Clients
+    class Osrm < Base
       def provider_url
         coordinates = if waypoints && waypoints.any?
                         waypoints
@@ -10,7 +10,7 @@ module RouteDirections
                         []
                       end
         coordinates.insert(0, origin)
-        coordinates.insert(0, destination)
+        coordinates.insert(-1, destination)
         base_url + coordinates.map { |point| point.reverse.join(',') }
                               .join(';')
       end
@@ -22,7 +22,8 @@ module RouteDirections
       private
 
       def base_url
-        options[:server] || 'https://router.project-osrm.org/route/v1/driving'
+        (options[:host] || 'https://router.project-osrm.org') +
+          '/route/v1/driving/'
       end
     end
   end

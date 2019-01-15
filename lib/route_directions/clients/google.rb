@@ -1,8 +1,8 @@
-require 'route_directions/providers/client'
+require 'route_directions/clients/base'
 
 module RouteDirections
-  module Providers
-    class Google < Client
+  module Clients
+    class Google < Base
       def provider_url
         'https://maps.googleapis.com/maps/api/directions/json'
       end

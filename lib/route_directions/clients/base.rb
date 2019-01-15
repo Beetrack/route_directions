@@ -1,8 +1,8 @@
 require 'route_directions/request'
 
 module RouteDirections
-  module Providers
-    class Client
+  module Clients
+    class Base
       attr_reader :origin, :destination, :waypoints, :options
 
       def initialize(origin, destination, options)
@@ -13,20 +13,20 @@ module RouteDirections
       end
 
       def response
-        request = Request.new(provider_url, headers, body_parameters)
-        request.execute
+        request = Request.new(provider_url, parameters)
+        response_class.new(request.execute)
+      end
+
+      def response_class
+        raise NotImplementedError, 'Called abstract method provided_url'
       end
 
       def provider_url
         raise NotImplementedError, 'Called abstract method provided_url'
       end
 
-      def body_parameters
+      def parameters
         raise NotImplementedError, 'Called abstract method parameters'
-      end
-
-      def headers
-        raise NotImplementedError, 'Called abstract method provided_url'
       end
 
       private

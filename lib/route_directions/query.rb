@@ -11,9 +11,9 @@ module RouteDirections
         raise ArgumentError, 'Invalid provider'
       end
 
-      require "route_directions/providers/#{provider.downcase}"
-      @client = RouteDirections::Providers.const_get(provider)
-                                          .new(origin, destination, opt)
+      require "route_directions/clients/#{provider.downcase}"
+      @client = RouteDirections::Clients.const_get(provider)
+                                        .new(origin, destination, opt)
     end
 
     def execute
