@@ -13,13 +13,10 @@ module RouteDirections
       end
 
       def response
-        request = Request.new(provider_url, parameters)
-        response_class.new(request.execute)
+        raise NotImplementedError, 'Called abstract method response'
       end
 
-      def response_class
-        raise NotImplementedError, 'Called abstract method provided_url'
-      end
+      private
 
       def provider_url
         raise NotImplementedError, 'Called abstract method provided_url'
@@ -28,8 +25,6 @@ module RouteDirections
       def parameters
         raise NotImplementedError, 'Called abstract method parameters'
       end
-
-      private
 
       def process_waypoints(waypoints)
         return nil unless waypoints.respond_to? :map

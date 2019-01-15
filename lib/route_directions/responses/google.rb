@@ -9,11 +9,11 @@ module RouteDirections
 
       def process_response
         route_body = process_status_code
-        @polyline = route_body['overview_polyline']['points']
-        @time = route_body['legs'].reduce(0) do |sum, value|
+        # @polyline = route_body['overview_polyline']['points']
+        @time = route_body['legs'].reduce(@time || 0) do |sum, value|
           sum + value['duration']['value']
         end
-        @distance = route_body['legs'].reduce(0) do |sum, value|
+        @distance = route_body['legs'].reduce(@distance || 0) do |sum, value|
           sum + value['distance']['value']
         end
       end

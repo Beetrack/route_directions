@@ -4,6 +4,13 @@ require 'route_directions/responses/osrm'
 module RouteDirections
   module Clients
     class Osrm < Base
+      def response
+        request = Request.new(provider_url, parameters)
+        RouteDirections::Responses::Osrm.new(request.execute)
+      end
+
+      private
+
       def provider_url
         coordinates = if waypoints && waypoints.any?
                         waypoints
@@ -19,12 +26,6 @@ module RouteDirections
       def parameters
         {}
       end
-
-      def response_class
-        RouteDirections::Responses::Osrm
-      end
-
-      private
 
       def base_url
         (options[:host] || 'https://router.project-osrm.org') +
