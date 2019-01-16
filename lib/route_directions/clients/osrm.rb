@@ -4,14 +4,20 @@ require 'route_directions/responses/osrm'
 module RouteDirections
   module Clients
     class Osrm < Base
-      def response
-        request = Request.new(provider_url, parameters)
-        RouteDirections::Responses::Osrm.new(request.execute)
+      def response_class
+        RouteDirections::Responses::Osrm
       end
 
       private
 
-      def provider_url
+      def request(origin, waypoints, destination)
+        Request.new(
+          provider_url(origin, waypoints, destination),
+          parameters
+        )
+      end
+
+      def provider_url(origin, waypoints, destination)
         coordinates = if waypoints && waypoints.any?
                         waypoints
                       else

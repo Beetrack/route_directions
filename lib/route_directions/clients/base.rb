@@ -3,6 +3,7 @@ require 'route_directions/request'
 module RouteDirections
   module Clients
     class Base
+      MAX_WAYPOINTS = 9
       attr_reader :origin, :destination, :waypoints, :options
 
       def initialize(origin, destination, options)
@@ -13,10 +14,25 @@ module RouteDirections
       end
 
       def response
-        raise NotImplementedError, 'Called abstract method response'
+        total_waypoints = whole_path
+        response = response_class.new
+
+        while (size = total_waypoints.size) > 1
+          response.http_response = request(
+            total_waypoints.shift,
+            total_waypoints.take([MAX_WAYPOINTS, size - 2].min),
+            total_waypoints.first
+          ).execute
+        end
+
+        response
       end
 
       private
+
+      def request
+        raise NotImplementedError, 'Called abstract method request'
+      end
 
       def provider_url
         raise NotImplementedError, 'Called abstract method provider_url'
@@ -24,6 +40,14 @@ module RouteDirections
 
       def parameters
         raise NotImplementedError, 'Called abstract method parameters'
+      end
+
+      def whole_path
+        if @waypoints && @waypoints.any?
+          [@origin] + @waypoints + [@destination]
+        else
+          [@origin, @destination]
+        end
       end
 
       def process_waypoints(waypoints)
