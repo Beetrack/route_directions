@@ -20,11 +20,11 @@ class OsrmClientTest < Minitest::Test
     assert_equal 'https://router.project-osrm.org/route/v1/driving/' \
                  '-77.029094,38.920554;-77.074785,38.891494;' \
                  '-77.137241,38.851339',
-                 @osrm.provider_url
+                 @osrm.send(:provider_url)
   end
 
   def test_parameters
     assert_equal Hash.new,
-                 @osrm.parameters
+                 @osrm.send(:parameters)
   end
 end

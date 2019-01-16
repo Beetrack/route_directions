@@ -19,7 +19,7 @@ module RouteDirections
       private
 
       def provider_url
-        raise NotImplementedError, 'Called abstract method provided_url'
+        raise NotImplementedError, 'Called abstract method provider_url'
       end
 
       def parameters

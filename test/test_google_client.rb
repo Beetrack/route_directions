@@ -8,12 +8,12 @@ class GoogleClientTest < Minitest::Test
     @options = { waypoints: [
       [38.891494, -77.074785]
     ] }
-    @google = RouteDirections::Clients::Google.new(origin, destination, options)
+    @google = RouteDirections::Clients::Google.new(@origin, @destination, @options)
   end
 
   def test_provider_url
     assert_equal 'https://maps.googleapis.com/maps/api/directions/json',
-                 @google.provider_url
+                 @google.send(:provider_url)
   end
 
   def test_parameters
@@ -25,6 +25,11 @@ class GoogleClientTest < Minitest::Test
                      key: nil
                    }
                  ),
-                 @google.parameters(@origin, @options[:waypoints], @destination)
+                 @google.send(:parameters, @origin, @options[:waypoints], @destination)
+  end
+
+  def test_response
+
+
   end
 end
