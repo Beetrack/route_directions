@@ -9,7 +9,7 @@ module RouteDirections
 
       def process_response
         route_body= process_status_code
-        # @polyline = route_body['geometry']
+        @polyline = (@polyline || []) + [route_body['geometry']]
         @time = (@time || 0) + route_body['duration']
         @distance = (@distance || 0) + route_body['distance']
       end
