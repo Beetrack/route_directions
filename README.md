@@ -53,3 +53,12 @@ Before list the params, We'll define a point like: An array with 2 numbers, the 
 - `time`: The stimated time to do the path (in secs)
 - `distance`: The traveled distance of the path (in meters)
 - `polyline`: An array of the polylines (string encoded) which draw the route
+
+## Errors
+As a common interface. It has a common list of errors, which'll be raised based on the provider trouble.
+
+- `OverQueryLimitError`: With Google it could be: `'OVER_DAILY_LIMIT', 'OVER_QUERY_LIMIT'`, with Osrm: `'TooBig'`
+- `NoResultsError`: With Google it could be: `'NOT_FOUND', 'ZERO_RESULTS', 'MAX_ROUTE_LENGTH_EXCEEDED', 'MAX_WAYPOINTS_EXCEEDED'`, with Osrm: `'NoRoute'`
+- `DeniedQueryError`: With Google it could be: `REQUEST_DENIED`.
+- `InvalidDataError`: With Google it could be: `'INVALID_REQUEST'`, with Osrm: `'InvalidUrl', 'InvalidService', 'InvalidVersion', 'InvalidOptions', 'InvalidQuery', 'InvalidValue', 'NoSegment'`
+- `ConnectionError`:With Google or Osrm it could be connection errors, basic ruby errors: `SocketError, Errno::ECONNREFUSED, Timeout::Error`
