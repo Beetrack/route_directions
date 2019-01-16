@@ -1,6 +1,5 @@
 require 'route_directions/responses/base'
 require 'route_directions/errors'
-require 'json'
 
 module RouteDirections
   module Responses
@@ -8,14 +7,14 @@ module RouteDirections
       private
 
       def process_response
-        route_body= process_status_code
+        route_body = process_status_code
         @polyline = (@polyline || []) + [route_body['geometry']]
         @time = (@time || 0) + route_body['duration']
         @distance = (@distance || 0) + route_body['distance']
       end
 
       def process_status_code
-        body = JSON.parse(@http_response.body)
+        body = @http_response
         case body['code']
         when 'NoRoute'
           raise RouteDirections::NoResultsError, body['status']
@@ -23,6 +22,8 @@ module RouteDirections
           raise RouteDirections::InvalidDataError, body['status']
         when 'TooBig'
           raise RouteDirections::OverQueryLimitError, body['status']
+        when 'CONNECTION_ERROR'
+          raise RouteDirections::ConnectionError, body['status']
         when 'Ok'
           return body['routes'][0]
         end

@@ -1,6 +1,5 @@
 require 'route_directions/responses/base'
 require 'route_directions/errors'
-require 'json'
 
 module RouteDirections
   module Responses
@@ -19,7 +18,7 @@ module RouteDirections
       end
 
       def process_status_code
-        body = JSON.parse(@http_response.body)
+        body = @http_response
         case body['status']
         when 'NOT_FOUND', 'ZERO_RESULTS', 'MAX_ROUTE_LENGTH_EXCEEDED', 'MAX_WAYPOINTS_EXCEEDED'
           raise RouteDirections::NoResultsError, body['status']
@@ -29,6 +28,8 @@ module RouteDirections
           raise RouteDirections::InvalidDataError, body['status']
         when 'REQUEST_DENIED'
           raise RouteDirections::DeniedQueryError, body['status']
+        when 'CONNECTION_ERROR'
+          raise RouteDirections::ConnectionError, body['status']
         when 'UNKNOWN_ERROR'
           raise StandardError, body['status']
         else

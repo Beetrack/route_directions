@@ -10,4 +10,7 @@ module RouteDirections
 
   class InvalidDataError < StandardError
   end
+
+  class ConnectionError < StandardError
+  end
 end
