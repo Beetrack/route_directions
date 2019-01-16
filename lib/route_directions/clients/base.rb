@@ -20,7 +20,7 @@ module RouteDirections
         while (size = total_waypoints.size) > 1
           response.http_response = request(
             total_waypoints.shift,
-            total_waypoints.take([MAX_WAYPOINTS, size - 2].min),
+            total_waypoints.shift([MAX_WAYPOINTS, size - 2].min),
             total_waypoints.first
           ).execute
         end
