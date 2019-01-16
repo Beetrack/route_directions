@@ -48,3 +48,8 @@ Before list the params, We'll define a point like: An array with 2 numbers, the 
 - `waypoints`: An array of points (in the required order)
 - `key`: The google api key. **REQUIRED: for google**
 - `host`: In case you're using OSRM you can provide your own server. By default, these requests go to OSRM example.
+
+## Response
+- `time`: The stimated time to do the path (in secs)
+- `distance`: The traveled distance of the path (in meters)
+- `polyline`: An array of the polylines (string encoded) which draw the route
