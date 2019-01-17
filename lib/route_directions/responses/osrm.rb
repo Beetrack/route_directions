@@ -12,7 +12,7 @@ module RouteDirections
         if body['code'] == 'Ok'
           process_valid(body['routes'][0])
         else
-          process_error
+          process_error(body['code'])
         end
       end
 
@@ -20,6 +20,7 @@ module RouteDirections
         @polyline = (@polyline || []) + [route_body['geometry']]
         @time = (@time || 0) + route_body['duration']
         @distance = (@distance || 0) + route_body['distance']
+        @statuses = (@statuses || []) + ['OK']
       end
     end
   end

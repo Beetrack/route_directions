@@ -3,8 +3,9 @@ module RouteDirections
     class Base
       DEFAULT_TIME = 20
       DEFAULT_DISTANCE = 100
+      ADMISSIBLE = 0.75
 
-      attr_reader :distance, :time, :polyline
+      attr_reader :distance, :time, :polyline, :status
       attr_reader :http_response
 
       def initialize(http_response = nil)
@@ -13,7 +14,11 @@ module RouteDirections
 
       def http_response=(http_response)
         @http_response = http_response
-        process_response if http_response
+
+        if http_response
+          process_response
+          update_status
+        end
       end
 
       private
@@ -26,10 +31,23 @@ module RouteDirections
         raise NotImplementedError, 'Called abstract method process_valid'
       end
 
-      def process_error
+      def process_error(error)
         @polyline = (@polyline || []) + ['']
         @time = (@time || 0) + DEFAULT_TIME
         @distance = (@distance || 0) + DEFAULT_DISTANCE
+        @statuses = (@statuses || []) + [error]
+      end
+
+      def update_status
+        valids = @statuses.select { |status| status == 'OK' }.size
+
+        if valids == @statuses.size
+          @status = 'OK'
+        elsif valids >= (ADMISSIBLE * @statuses.size)
+          @status = 'Approached'
+        else
+          @status = 'Error'
+        end
       end
     end
   end

@@ -12,7 +12,7 @@ module RouteDirections
         if body['status'] == 'OK'
           process_valid(body['routes'][0])
         else
-          process_error
+          process_error(body['status'])
         end
       end
 
@@ -24,6 +24,7 @@ module RouteDirections
         @distance = route_body['legs'].reduce(@distance || 0) do |sum, value|
           sum + value['distance']['value']
         end
+        @statuses = (@statuses || []) + ['OK']
       end
     end
   end
