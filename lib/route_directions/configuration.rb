@@ -14,8 +14,12 @@ module RouteDirections
 
     attr_reader :default_provider
 
+    def initialize
+      @options = default_options
+    end
+
     def options=(options)
-      @options = {}
+      @options = default_options
       if options.key? :provider
         single_provider(options)
       elsif multiple_providers?(options)
@@ -30,6 +34,14 @@ module RouteDirections
     end
 
     private
+
+    def default_options
+      result = {}
+      AVAILABLE_PROVIDERS.each do |provider|
+        result[provider.downcase.to_sym] = OpenStruct.new
+      end
+      result
+    end
 
     def multiple_providers?(options)
       AVAILABLE_PROVIDERS.any? do |provider|
