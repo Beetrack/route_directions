@@ -15,7 +15,13 @@ module RouteDirections
       uri = URI(provider_url)
       uri.query = URI.encode_www_form(parameters) if parameters.any?
       begin
-        Net::HTTP.get_response(uri)
+        response = Net::HTTP.get_response(uri)
+        case response
+        when Net::HTTPSuccess
+          response
+        else
+          retry_execute
+        end
       rescue SocketError, Errno::ECONNREFUSED, Timeout::Error
         retry_execute
       end
