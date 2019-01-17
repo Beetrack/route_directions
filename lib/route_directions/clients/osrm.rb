@@ -47,6 +47,12 @@ module RouteDirections
           MAX_WAYPOINTS
       end
 
+      def max_tries
+        options[:max_retries] ||
+          Configuration.instance.osrm_options.max_tries ||
+          MAX_TRIES
+      end
+
       def host
         options[:host] ||
           Configuration.instance.osrm_options.host ||

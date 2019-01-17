@@ -5,6 +5,7 @@ module RouteDirections
   module Clients
     class Base
       MAX_WAYPOINTS = 9
+      MAX_TRIES = 3
       attr_reader :origin, :destination, :waypoints, :options
 
       def initialize(origin, destination, options)
@@ -51,6 +52,10 @@ module RouteDirections
         raise NotImplementedError, 'Called abstract method max_waypoints'
       end
 
+      def max_tries
+        raise NotImplementedError, 'Called abstract method max_tries'
+      end
+
       def key
         raise NotImplementedError, 'Called abstract method key'
       end
@@ -68,7 +73,7 @@ module RouteDirections
       end
 
       def retry_request(origin, waypoints, destination)
-        @retries = (@retries || MAX_TRIES) - 1
+        @retries = (@retries || max_tries) - 1
         if @retries > 1
           sleep 1
           assure_response(origin, waypoints, destination)

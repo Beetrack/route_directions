@@ -45,6 +45,12 @@ module RouteDirections
           MAX_WAYPOINTS
       end
 
+      def max_tries
+        options[:max_retries] ||
+          Configuration.instance.google_options.max_tries ||
+          MAX_TRIES
+      end
+
       def key
         options[:key] || Configuration.instance.google_options.key
       end
