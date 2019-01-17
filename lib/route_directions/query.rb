@@ -1,7 +1,7 @@
+require 'route_directions/configuration'
+
 module RouteDirections
   class Query
-    AVAILABLE_PROVIDERS = %w[Google Osrm].freeze
-
     attr_reader :client
 
     def initialize(origin, destination, options)
@@ -24,7 +24,7 @@ module RouteDirections
 
     def default_options
       {
-        provider: 'Google'
+        provider: Configuration.instance.default_provider
       }
     end
   end

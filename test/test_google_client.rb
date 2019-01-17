@@ -27,9 +27,4 @@ class GoogleClientTest < Minitest::Test
                  ),
                  @google.send(:parameters, @origin, @options[:waypoints], @destination)
   end
-
-  def test_response
-
-
-  end
 end

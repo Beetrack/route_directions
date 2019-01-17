@@ -1,4 +1,5 @@
 require 'route_directions/query'
+require 'route_directions/configuration'
 
 module RouteDirections
   def self.query(origin, destination, options = {})
