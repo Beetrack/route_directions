@@ -57,6 +57,7 @@ module RouteDirections
       def retry_request(origin, waypoints, destination)
         @retries = (@retries || MAX_TRIES) - 1
         if @retries > 1
+          sleep 1
           assure_response(origin, waypoints, destination)
         else
           response  = {}

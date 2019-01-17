@@ -32,6 +32,7 @@ module RouteDirections
     def retry_execute
       @retries = (@retries || MAX_TRIES) - 1
       if @retries > 1
+        sleep 1
         execute
       else
         body = {}
