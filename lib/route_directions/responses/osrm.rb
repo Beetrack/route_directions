@@ -8,26 +8,18 @@ module RouteDirections
       private
 
       def process_response
-        route_body = process_status_code
+        body = JSON.parse(@http_response.body)
+        if body['code'] == 'Ok'
+          process_valid(body['routes'][0])
+        else
+          process_error
+        end
+      end
+
+      def process_valid(route_body)
         @polyline = (@polyline || []) + [route_body['geometry']]
         @time = (@time || 0) + route_body['duration']
         @distance = (@distance || 0) + route_body['distance']
-      end
-
-      def process_status_code
-        body = JSON.parse(@http_response.body)
-        case body['code']
-        when 'NoRoute'
-          raise RouteDirections::NoResultsError, body['status']
-        when 'InvalidUrl', 'InvalidService', 'InvalidVersion', 'InvalidOptions', 'InvalidQuery', 'InvalidValue', 'NoSegment'
-          raise RouteDirections::InvalidDataError, body['status']
-        when 'TooBig'
-          raise RouteDirections::OverQueryLimitError, body['status']
-        when 'CONNECTION_ERROR'
-          raise RouteDirections::ConnectionError, body['status']
-        when 'Ok'
-          return body['routes'][0]
-        end
       end
     end
   end
