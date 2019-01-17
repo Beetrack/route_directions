@@ -2,6 +2,8 @@ require 'route_directions/configuration'
 
 module RouteDirections
   class Query
+    DEFAULT_PROVIDER = 'Google'
+
     attr_reader :client
 
     def initialize(origin, destination, options)
@@ -24,7 +26,7 @@ module RouteDirections
 
     def default_options
       {
-        provider: Configuration.instance.default_provider
+        provider: Configuration.instance.default_provider || DEFAULT_PROVIDER
       }
     end
   end
