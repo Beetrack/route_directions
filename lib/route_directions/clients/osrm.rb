@@ -34,12 +34,23 @@ module RouteDirections
       end
 
       def base_url
-        (options[:host] || 'https://router.project-osrm.org') +
-          '/route/v1/driving/'
+        host + '/route/v1/driving/'
       end
 
       def valid?(response)
         true
+      end
+
+      def max_waypoints
+        options[:max_waypoint_size] ||
+          Configuration.instance.osrm_options.max_waypoint_size ||
+          MAX_WAYPOINTS
+      end
+
+      def host
+        options[:host] ||
+          Configuration.instance.osrm_options.host ||
+          'https://router.project-osrm.org'
       end
     end
   end

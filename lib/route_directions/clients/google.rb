@@ -25,7 +25,7 @@ module RouteDirections
         required_parameters = {
           origin: origin.join(','),
           destination: destination.join(','),
-          key: options[:key]
+          key: key
         }
         if waypoints.any?
           required_parameters[:waypoints] = waypoints
@@ -37,6 +37,16 @@ module RouteDirections
 
       def valid?(response)
         !(['OVER_DAILY_LIMIT', 'OVER_QUERY_LIMIT'].include? response['status'])
+      end
+
+      def max_waypoints
+        options[:max_waypoint_size] ||
+          Configuration.instance.google_options.max_waypoint_size ||
+          MAX_WAYPOINTS
+      end
+
+      def key
+        options[:key] || Configuration.instance.google_options.key
       end
     end
   end

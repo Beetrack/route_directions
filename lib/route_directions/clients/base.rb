@@ -1,4 +1,5 @@
 require 'route_directions/request'
+require 'route_directions/configuration'
 
 module RouteDirections
   module Clients
@@ -20,7 +21,7 @@ module RouteDirections
         while (size = total_waypoints.size) > 1
           response.http_response = assure_response(
             total_waypoints.shift,
-            total_waypoints.shift([MAX_WAYPOINTS, size - 2].min),
+            total_waypoints.shift([max_waypoints, size - 2].min),
             total_waypoints.first
           )
         end
@@ -44,6 +45,18 @@ module RouteDirections
 
       def parameters
         raise NotImplementedError, 'Called abstract method parameters'
+      end
+
+      def max_waypoints
+        raise NotImplementedError, 'Called abstract method max_waypoints'
+      end
+
+      def key
+        raise NotImplementedError, 'Called abstract method key'
+      end
+
+      def host
+        raise NotImplementedError, 'Called abstract method host'
       end
 
       def assure_response(origin, waypoints, destination)
