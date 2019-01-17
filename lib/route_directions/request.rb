@@ -4,11 +4,13 @@ require 'json'
 module RouteDirections
   class Request
     MAX_TRIES = 3
+
     attr_reader :provider_url, :parameters
 
-    def initialize(provider_url, parameters)
+    def initialize(provider_url, parameters, tries)
       @provider_url = provider_url
       @parameters = parameters
+      @max_tries = tries || MAX_TRIES
     end
 
     def execute
@@ -30,7 +32,7 @@ module RouteDirections
     private
 
     def retry_execute
-      @retries = (@retries || MAX_TRIES) - 1
+      @retries = (@retries || @max_tries) - 1
       if @retries > 1
         sleep 1
         execute

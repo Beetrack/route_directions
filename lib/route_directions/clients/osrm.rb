@@ -13,7 +13,8 @@ module RouteDirections
       def request(origin, waypoints, destination)
         Request.new(
           provider_url(origin, waypoints, destination),
-          parameters
+          parameters,
+          max_tries
         )
       end
 
