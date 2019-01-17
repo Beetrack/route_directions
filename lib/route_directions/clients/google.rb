@@ -34,6 +34,10 @@ module RouteDirections
         end
         required_parameters
       end
+
+      def valid?(response)
+        !(['OVER_DAILY_LIMIT', 'OVER_QUERY_LIMIT'].include? response['status'])
+      end
     end
   end
 end

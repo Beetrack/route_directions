@@ -37,6 +37,10 @@ module RouteDirections
         (options[:host] || 'https://router.project-osrm.org') +
           '/route/v1/driving/'
       end
+
+      def valid?(response)
+        true
+      end
     end
   end
 end
