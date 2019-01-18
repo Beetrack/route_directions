@@ -37,7 +37,7 @@ module RouteDirections
       end
 
       def valid?(response)
-        !(['OVER_DAILY_LIMIT', 'OVER_QUERY_LIMIT'].include? response['status'])
+        !(['OVER_QUERY_LIMIT'].include? response['status'])
       end
 
       def max_waypoints
