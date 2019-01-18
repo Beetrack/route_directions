@@ -42,6 +42,10 @@ module RouteDirections
         true
       end
 
+      def abort?(response)
+        false
+      end
+
       def max_waypoints
         options[:max_waypoint_size] ||
           Configuration.instance.osrm_options.max_waypoint_size ||

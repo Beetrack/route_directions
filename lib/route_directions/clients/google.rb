@@ -40,6 +40,10 @@ module RouteDirections
         !(['OVER_QUERY_LIMIT'].include? response['status'])
       end
 
+      def abort?(response)
+        ['REQUEST_DENIED'].include? response['status']
+      end
+
       def max_waypoints
         options[:max_waypoint_size] ||
           Configuration.instance.google_options.max_waypoint_size ||

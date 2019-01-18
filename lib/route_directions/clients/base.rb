@@ -9,6 +9,7 @@ module RouteDirections
       attr_reader :origin, :destination, :waypoints, :options
 
       def initialize(origin, destination, options)
+        @continue = true
         @origin = process_point_parameter(origin)
         @destination = process_point_parameter(destination)
         @waypoints = process_waypoints(options[:waypoints])
@@ -19,7 +20,7 @@ module RouteDirections
         total_waypoints = whole_path
         response = response_class.new
 
-        while (size = total_waypoints.size) > 1
+        while (size = total_waypoints.size) > 1 && continue?
           response.http_response = assure_response(
             total_waypoints.shift,
             total_waypoints.shift([max_waypoints, size - 2].min),
@@ -34,6 +35,10 @@ module RouteDirections
 
       def valid?
         raise NotImplementedError, 'Called abstract method valid?'
+      end
+
+      def abort?
+        raise NotImplementedError, 'Called abstract method abort?'
       end
 
       def request
@@ -64,9 +69,16 @@ module RouteDirections
         raise NotImplementedError, 'Called abstract method host'
       end
 
+      def continue?
+        @continue
+      end
+
       def assure_response(origin, waypoints, destination)
         response = request(origin, waypoints, destination).execute
-        unless valid?(response)
+
+        if abort?(response)
+          @continue = false
+        elsif !valid?(response)
           response = retry_request(origin, waypoints, destination)
         end
         response
