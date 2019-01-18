@@ -25,6 +25,10 @@ module RouteDirections
         update_status
       end
 
+      def errors
+        @statuses.select { |status| status != 'OK' }
+      end
+
       private
 
       def process_response
