@@ -1,3 +1,5 @@
+require 'net/http'
+
 module RouteDirections
   module Responses
     class Base
@@ -9,16 +11,18 @@ module RouteDirections
       attr_reader :http_response
 
       def initialize(http_response = nil)
+        @statuses = []
         self.http_response = http_response
       end
 
       def http_response=(http_response)
         @http_response = http_response
-
-        if http_response
+        if http_response && http_response.message == 'ErrorConnection'
+          process_error('CONNECTION ERROR')
+        elsif http_response
           process_response
-          update_status
         end
+        update_status
       end
 
       private

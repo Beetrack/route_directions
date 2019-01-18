@@ -37,10 +37,7 @@ module RouteDirections
         sleep 1
         execute
       else
-        body = {}
-        body['status'] = "CONNECTION_ERROR"
-        body['code'] = "CONNECTION_ERROR"
-        body
+        Net::HTTPError.new('ErrorConnection', nil)
       end
     end
   end

@@ -78,10 +78,7 @@ module RouteDirections
           sleep 1
           assure_response(origin, waypoints, destination)
         else
-          response  = {}
-          response['status'] = "ANSWER_ERROR"
-          response['code'] = "ANSWER_ERROR"
-          response
+          Net::HTTPError.new('ErrorConnection', nil)
         end
       end
 
