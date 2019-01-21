@@ -22,6 +22,19 @@ module RouteDirections
         @distance = (@distance || 0) + route_body['distance']
         @statuses = (@statuses || []) + ['OK']
       end
+
+      def process_status_code(status)
+        case status
+        when 'NoRoute'
+          'NoResultsError'
+        when 'InvalidUrl', 'InvalidService', 'InvalidVersion', 'InvalidOptions', 'InvalidQuery', 'InvalidValue', 'NoSegment'
+          'InvalidDataError'
+        when 'TooBig'
+          'OverQueryLimitError'
+        else
+          status
+        end
+      end
     end
   end
 end

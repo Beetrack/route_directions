@@ -26,6 +26,21 @@ module RouteDirections
         end
         @statuses = (@statuses || []) + ['OK']
       end
+
+      def process_status_code(status)
+        case status
+        when 'NOT_FOUND', 'ZERO_RESULTS', 'MAX_ROUTE_LENGTH_EXCEEDED', 'MAX_WAYPOINTS_EXCEEDED'
+          'NoResultsError'
+        when 'OVER_DAILY_LIMIT', 'OVER_QUERY_LIMIT'
+          'OverQueryLimitError'
+        when 'REQUEST_DENIED', 'INVALID_REQUEST'
+          'DeniedQueryError'
+        when 'UNKNOWN_ERROR'
+          'StandardError'
+        else
+          status
+        end
+      end
     end
   end
 end

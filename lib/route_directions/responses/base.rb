@@ -18,7 +18,7 @@ module RouteDirections
       def http_response=(http_response)
         @http_response = http_response
         if http_response && http_response.message == 'ErrorConnection'
-          process_error('CONNECTION ERROR')
+          process_error('ErrorConnection')
         elsif http_response
           process_response
         end
@@ -39,11 +39,15 @@ module RouteDirections
         raise NotImplementedError, 'Called abstract method process_valid'
       end
 
+      def process_status_code
+        raise NotImplementedError, 'Called abstract method process_status_code'
+      end
+
       def process_error(error)
         @polyline = (@polyline || []) + ['']
         @time = (@time || 0) + DEFAULT_TIME
         @distance = (@distance || 0) + DEFAULT_DISTANCE
-        @statuses = (@statuses || []) + [error]
+        @statuses = (@statuses || []) + [process_status_code(error)]
       end
 
       def update_status
