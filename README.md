@@ -45,7 +45,7 @@ Before list the params, We'll define a point like: An array with 2 numbers, the 
   - `waypoints`: An array of points (in the required order).
   - `key`: The google api key. **REQUIRED for google**.
   - `host`: In case you're using OSRM you can provide your own server. By default, these requests go to OSRM example.
-
+  - `departure_time`: An `Integer`. It specifies the departure time in seconds (*since midnight, January 1, 1970 UTC*). **JUST for google**.
 ## Response
 - `time`: The stimated time to do the path (in seconds).
 - `distance`: The traveled distance of the path (in meters).
