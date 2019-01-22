@@ -17,14 +17,14 @@ module RouteDirections
       end
 
       def process_valid(route_body)
-        @polyline = (@polyline || []) + [route_body['overview_polyline']['points']]
-        @time = route_body['legs'].reduce(@time || 0) do |sum, value|
+        @time = route_body['legs'].reduce(@time) do |sum, value|
           sum + value['duration']['value']
         end
-        @distance = route_body['legs'].reduce(@distance || 0) do |sum, value|
+        @distance = route_body['legs'].reduce(@distance) do |sum, value|
           sum + value['distance']['value']
         end
-        @statuses = (@statuses || []) + ['OK']
+        @polyline = @polyline + [route_body['overview_polyline']['points']]
+        @statuses = @statuses + ['OK']
       end
 
       def process_status_code(status)

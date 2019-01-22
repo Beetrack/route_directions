@@ -11,6 +11,9 @@ module RouteDirections
       attr_reader :http_response
 
       def initialize(http_response = nil)
+        @time = 0
+        @distance = 0
+        @polyline = []
         @statuses = []
         self.http_response = http_response
       end
@@ -44,10 +47,10 @@ module RouteDirections
       end
 
       def process_error(error)
-        @polyline = (@polyline || []) + ['']
-        @time = (@time || 0) + DEFAULT_TIME
-        @distance = (@distance || 0) + DEFAULT_DISTANCE
-        @statuses = (@statuses || []) + [process_status_code(error)]
+        @time = @time + DEFAULT_TIME
+        @distance = @distance + DEFAULT_DISTANCE
+        @polyline = @polyline + ['']
+        @statuses = @statuses + [process_status_code(error)]
       end
 
       def update_status
