@@ -10,10 +10,10 @@ module RouteDirections
 
       private
 
-      def request(origin, waypoints, destination)
+      def request(origin, waypoints, destination, departure_time)
         Request.new(
           provider_url,
-          parameters(origin, waypoints, destination),
+          parameters(origin, waypoints, destination, departure_time),
           max_tries
         )
       end
@@ -22,17 +22,19 @@ module RouteDirections
         'https://maps.googleapis.com/maps/api/directions/json'
       end
 
-      def parameters(origin, waypoints, destination)
+      def parameters(origin, waypoints, destination, departure_time)
         required_parameters = {
           origin: origin.join(','),
           destination: destination.join(','),
-          key: key
+          key: key,
+          departure_time: departure_time
         }
         if waypoints.any?
           required_parameters[:waypoints] = waypoints
                                             .map { |point| point.join(',') }
                                             .join('|')
         end
+
         required_parameters
       end
 

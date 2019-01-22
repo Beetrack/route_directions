@@ -24,7 +24,8 @@ module RouteDirections
           response.http_response = assure_response(
             total_waypoints.shift,
             total_waypoints.shift([max_waypoints, size - 2].min),
-            total_waypoints.first
+            total_waypoints.first,
+            @options[:departure_time]
           )
         end
 
@@ -73,22 +74,22 @@ module RouteDirections
         @continue
       end
 
-      def assure_response(origin, waypoints, destination)
-        response = request(origin, waypoints, destination).execute
+      def assure_response(origin, waypoints, destination, departure_time)
+        response = request(origin, waypoints, destination, departure_time).execute
 
         if abort?(response)
           @continue = false
         elsif !valid?(response)
-          response = retry_request(origin, waypoints, destination)
+          response = retry_request(origin, waypoints, destination, departure_time)
         end
         response
       end
 
-      def retry_request(origin, waypoints, destination)
+      def retry_request(origin, waypoints, destination, departure_time)
         @retries = (@retries || max_tries) - 1
         if @retries > 1
           sleep 1
-          assure_response(origin, waypoints, destination)
+          assure_response(origin, waypoints, destination, departure_time)
         else
           Net::HTTPError.new('ErrorConnection', nil)
         end

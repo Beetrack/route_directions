@@ -10,7 +10,7 @@ module RouteDirections
 
       private
 
-      def request(origin, waypoints, destination)
+      def request(origin, waypoints, destination, departure_time)
         Request.new(
           provider_url(origin, waypoints, destination),
           parameters,
