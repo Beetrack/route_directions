@@ -37,7 +37,7 @@ module RouteDirections
         sleep 1
         execute
       else
-        Net::HTTPError.new('ErrorConnection', nil)
+        Net::HTTPError.new('error_connection', nil)
       end
     end
   end

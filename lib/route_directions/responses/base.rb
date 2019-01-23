@@ -7,6 +7,14 @@ module RouteDirections
       DEFAULT_DISTANCE = 100
       ADMISSIBLE = 0.75
 
+      STATUS = %w[ok approached error].freeze
+      ERRORS = %w[error_connection
+                  no_results_error
+                  over_query_limit_error
+                  denied_query_error
+                  standard_error
+                  invalid_data_error].freeze
+
       attr_reader :distance, :time, :polyline, :status
       attr_reader :http_response
 
@@ -20,8 +28,8 @@ module RouteDirections
 
       def http_response=(http_response)
         @http_response = http_response
-        if http_response && http_response.message == 'ErrorConnection'
-          process_error('ErrorConnection')
+        if http_response && http_response.message == ERRORS[0]
+          process_error(ERRORS[0])
         elsif http_response
           process_response
         end
@@ -29,7 +37,7 @@ module RouteDirections
       end
 
       def errors
-        @statuses.select { |status| status != 'OK' }
+        @statuses.select { |status| status != STATUS[0] }
       end
 
       private
@@ -54,14 +62,14 @@ module RouteDirections
       end
 
       def update_status
-        valids = @statuses.select { |status| status == 'OK' }.size
+        valids = @statuses.select { |status| status == STATUS[0] }.size
 
         if valids == @statuses.size
-          @status = 'OK'
+          @status = STATUS[0]
         elsif valids >= (ADMISSIBLE * @statuses.size)
-          @status = 'Approached'
+          @status = STATUS[1]
         else
-          @status = 'Error'
+          @status = STATUS[2]
         end
       end
     end

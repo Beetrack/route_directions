@@ -90,7 +90,7 @@ module RouteDirections
           sleep 1
           assure_response(origin, waypoints, destination)
         else
-          Net::HTTPError.new('ErrorConnection', nil)
+          Net::HTTPError.new('error_connection', nil)
         end
       end
 

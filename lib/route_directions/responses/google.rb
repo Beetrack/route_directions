@@ -5,11 +5,13 @@ require 'json'
 module RouteDirections
   module Responses
     class Google < Base
+      OK = 'OK'
+
       private
 
       def process_response
         body = JSON.parse(@http_response.body)
-        if body['status'] == 'OK'
+        if body['status'] == OK
           process_valid(body['routes'][0])
         else
           process_error(body['status'])
@@ -24,19 +26,19 @@ module RouteDirections
           sum + value['distance']['value']
         end
         @polyline += [route_body['overview_polyline']['points']]
-        @statuses += ['OK']
+        @statuses += [STATUS[0]]
       end
 
       def process_status_code(status)
         case status
         when 'NOT_FOUND', 'ZERO_RESULTS', 'MAX_ROUTE_LENGTH_EXCEEDED', 'MAX_WAYPOINTS_EXCEEDED'
-          'NoResultsError'
+          ERRORS[1]
         when 'OVER_DAILY_LIMIT', 'OVER_QUERY_LIMIT'
-          'OverQueryLimitError'
+          ERRORS[2]
         when 'REQUEST_DENIED', 'INVALID_REQUEST'
-          'DeniedQueryError'
+          ERRORS[3]
         when 'UNKNOWN_ERROR'
-          'StandardError'
+          ERRORS[4]
         else
           status
         end
