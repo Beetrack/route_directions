@@ -47,10 +47,10 @@ module RouteDirections
       end
 
       def process_error(error)
-        @time = @time + DEFAULT_TIME
-        @distance = @distance + DEFAULT_DISTANCE
-        @polyline = @polyline + ['']
-        @statuses = @statuses + [process_status_code(error)]
+        @time += DEFAULT_TIME
+        @distance += DEFAULT_DISTANCE
+        @polyline += ['']
+        @statuses += [process_status_code(error)]
       end
 
       def update_status

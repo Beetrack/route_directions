@@ -23,8 +23,8 @@ module RouteDirections
         @distance = route_body['legs'].reduce(@distance) do |sum, value|
           sum + value['distance']['value']
         end
-        @polyline = @polyline + [route_body['overview_polyline']['points']]
-        @statuses = @statuses + ['OK']
+        @polyline += [route_body['overview_polyline']['points']]
+        @statuses += ['OK']
       end
 
       def process_status_code(status)

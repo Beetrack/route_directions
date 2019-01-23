@@ -17,10 +17,10 @@ module RouteDirections
       end
 
       def process_valid(route_body)
-        @time = @time + route_body['duration']
-        @distance = @distance + route_body['distance']
-        @statuses = @statuses + ['OK']
-        @polyline = @polyline + [route_body['geometry']]
+        @time += route_body['duration']
+        @distance += route_body['distance']
+        @statuses += ['OK']
+        @polyline += [route_body['geometry']]
       end
 
       def process_status_code(status)
