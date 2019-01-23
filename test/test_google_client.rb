@@ -22,7 +22,8 @@ class GoogleClientTest < Minitest::Test
                      origin: '38.920554,-77.029094',
                      destination: '38.851339,-77.137241',
                      waypoints: '38.891494,-77.074785',
-                     key: nil
+                     key: nil,
+                     departure_time: DateTime.now.to_time.to_i
                    }
                  ),
                  @google.send(:parameters, @origin, @options[:waypoints], @destination)

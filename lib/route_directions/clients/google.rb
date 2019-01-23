@@ -1,5 +1,6 @@
 require 'route_directions/clients/base'
 require 'route_directions/responses/google'
+require 'date'
 
 module RouteDirections
   module Clients
@@ -10,19 +11,19 @@ module RouteDirections
 
       private
 
-      def request(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
+      def request(origin = nil, waypoints = nil, destination = nil)
         Request.new(
           provider_url,
-          parameters(origin, waypoints, destination, departure_time),
+          parameters(origin, waypoints, destination),
           max_tries
         )
       end
 
-      def provider_url(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
+      def provider_url(origin = nil, waypoints = nil, destination = nil)
         'https://maps.googleapis.com/maps/api/directions/json'
       end
 
-      def parameters(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
+      def parameters(origin = nil, waypoints = nil, destination = nil)
         required_parameters = {
           origin: origin.join(','),
           destination: destination.join(','),
@@ -60,6 +61,10 @@ module RouteDirections
 
       def key
         options[:key] || Configuration.instance.google_options.key
+      end
+
+      def departure_time
+        options[:departure_time] || DateTime.now.to_time.to_i
       end
     end
   end

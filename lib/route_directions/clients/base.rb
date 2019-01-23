@@ -24,8 +24,7 @@ module RouteDirections
           response.http_response = assure_response(
             total_waypoints.shift,
             total_waypoints.shift([max_waypoints, size - 2].min),
-            total_waypoints.first,
-            @options[:departure_time]
+            total_waypoints.first
           )
         end
 
@@ -42,15 +41,15 @@ module RouteDirections
         raise NotImplementedError, 'Called abstract method abort?'
       end
 
-      def request(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
+      def request(origin = nil, waypoints = nil, destination = nil)
         raise NotImplementedError, 'Called abstract method request'
       end
 
-      def provider_url(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
+      def provider_url(origin = nil, waypoints = nil, destination = nil)
         raise NotImplementedError, 'Called abstract method provider_url'
       end
 
-      def parameters(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
+      def parameters(origin = nil, waypoints = nil, destination = nil)
         raise NotImplementedError, 'Called abstract method parameters'
       end
 
@@ -66,26 +65,30 @@ module RouteDirections
         raise NotImplementedError, 'Called abstract method key'
       end
 
+      def departure_time
+        raise NotImplementedError, 'Called abstract method departure_time'
+      end
+
       def host
         raise NotImplementedError, 'Called abstract method host'
       end
 
-      def assure_response(origin, waypoints, destination, departure_time)
-        response = request(origin, waypoints, destination, departure_time).execute
+      def assure_response(origin, waypoints, destination)
+        response = request(origin, waypoints, destination).execute
 
         if abort?(response)
           @continue = false
         elsif !valid?(response)
-          response = retry_request(origin, waypoints, destination, departure_time)
+          response = retry_request(origin, waypoints, destination)
         end
         response
       end
 
-      def retry_request(origin, waypoints, destination, departure_time)
+      def retry_request(origin, waypoints, destination)
         @retries = (@retries || max_tries) - 1
         if @retries > 1
           sleep 1
-          assure_response(origin, waypoints, destination, departure_time)
+          assure_response(origin, waypoints, destination)
         else
           Net::HTTPError.new('ErrorConnection', nil)
         end

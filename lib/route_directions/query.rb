@@ -1,5 +1,4 @@
 require 'route_directions/configuration'
-require 'date'
 
 module RouteDirections
   class Query
@@ -28,7 +27,6 @@ module RouteDirections
     def default_options
       {
         provider: Configuration.instance.default_provider || DEFAULT_PROVIDER,
-        departure_time: DateTime.now.to_time.to_i
       }
     end
   end
