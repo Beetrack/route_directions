@@ -10,7 +10,7 @@ module RouteDirections
 
       private
 
-      def request(origin, waypoints, destination, departure_time)
+      def request(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         Request.new(
           provider_url(origin, waypoints, destination),
           parameters,
@@ -18,7 +18,7 @@ module RouteDirections
         )
       end
 
-      def provider_url(origin, waypoints, destination)
+      def provider_url(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         coordinates = if waypoints && waypoints.any?
                         waypoints
                       else
@@ -30,7 +30,7 @@ module RouteDirections
                               .join(';')
       end
 
-      def parameters
+      def parameters(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         {}
       end
 

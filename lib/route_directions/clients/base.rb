@@ -20,7 +20,7 @@ module RouteDirections
         total_waypoints = whole_path
         response = response_class.new
 
-        while (size = total_waypoints.size) > 1 && continue?
+        while (size = total_waypoints.size) > 1 && @continue
           response.http_response = assure_response(
             total_waypoints.shift,
             total_waypoints.shift([max_waypoints, size - 2].min),
@@ -34,23 +34,23 @@ module RouteDirections
 
       private
 
-      def valid?
+      def valid?(response)
         raise NotImplementedError, 'Called abstract method valid?'
       end
 
-      def abort?
+      def abort?(response)
         raise NotImplementedError, 'Called abstract method abort?'
       end
 
-      def request
+      def request(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         raise NotImplementedError, 'Called abstract method request'
       end
 
-      def provider_url
+      def provider_url(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         raise NotImplementedError, 'Called abstract method provider_url'
       end
 
-      def parameters
+      def parameters(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         raise NotImplementedError, 'Called abstract method parameters'
       end
 
@@ -68,10 +68,6 @@ module RouteDirections
 
       def host
         raise NotImplementedError, 'Called abstract method host'
-      end
-
-      def continue?
-        @continue
       end
 
       def assure_response(origin, waypoints, destination, departure_time)

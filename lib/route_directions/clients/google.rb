@@ -10,7 +10,7 @@ module RouteDirections
 
       private
 
-      def request(origin, waypoints, destination, departure_time)
+      def request(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         Request.new(
           provider_url,
           parameters(origin, waypoints, destination, departure_time),
@@ -18,11 +18,11 @@ module RouteDirections
         )
       end
 
-      def provider_url
+      def provider_url(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         'https://maps.googleapis.com/maps/api/directions/json'
       end
 
-      def parameters(origin, waypoints, destination, departure_time)
+      def parameters(origin = nil, waypoints = nil, destination = nil, departure_time = nil)
         required_parameters = {
           origin: origin.join(','),
           destination: destination.join(','),
