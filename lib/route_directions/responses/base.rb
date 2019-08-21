@@ -7,7 +7,7 @@ module RouteDirections
       DEFAULT_DISTANCE = 100
       ADMISSIBLE = 0.75
 
-      attr_reader :distance, :time, :polyline, :status
+      attr_reader :distance, :time, :polyline, :status, :steps
       attr_reader :http_response
 
       def initialize(http_response = nil)
@@ -15,6 +15,7 @@ module RouteDirections
         @distance = 0
         @polyline = []
         @statuses = []
+        @steps = []
         self.http_response = http_response
       end
 
@@ -50,6 +51,7 @@ module RouteDirections
         @time = @time + DEFAULT_TIME
         @distance = @distance + DEFAULT_DISTANCE
         @polyline = @polyline + ['']
+        @stpes = @steps + ['']
         @statuses = @statuses + [process_status_code(error)]
       end
 
