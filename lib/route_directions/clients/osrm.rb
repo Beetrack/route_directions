@@ -31,7 +31,7 @@ module RouteDirections
       end
 
       def parameters
-        {}
+        { steps: true }
       end
 
       def base_url
