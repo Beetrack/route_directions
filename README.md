@@ -50,6 +50,7 @@ Before list the params, We'll define a point like: An array with 2 numbers, the 
 - `time`: The stimated time to do the path (in seconds).
 - `distance`: The traveled distance of the path (in meters).
 - `polyline`: An array of the polylines (string encoded) which draw the route.
+- `steps`: An array of the steps for each leg (route has many legs).
 - `status`: The calculated status based on the historical list of statuses. 3 values:
   - `OK` (all the request were `Ok`s).
   - `Approached` (more than 75% of the requests were `Ok`s).
