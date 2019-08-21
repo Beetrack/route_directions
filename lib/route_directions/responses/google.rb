@@ -23,6 +23,9 @@ module RouteDirections
         @distance = route_body['legs'].reduce(@distance) do |sum, value|
           sum + value['distance']['value']
         end
+        @steps = [@steps + route_body['legs'].each do |leg|
+          @steps << leg['steps']
+        end].flatten
         @polyline = @polyline + [route_body['overview_polyline']['points']]
         @statuses = @statuses + ['OK']
       end

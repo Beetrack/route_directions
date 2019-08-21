@@ -21,6 +21,9 @@ module RouteDirections
         @distance = @distance + route_body['distance']
         @statuses = @statuses + ['OK']
         @polyline = @polyline + [route_body['geometry']]
+        @steps = [@steps + route_body['legs'].each do |leg|
+          @steps << leg['steps']
+        end].flatten
       end
 
       def process_status_code(status)
