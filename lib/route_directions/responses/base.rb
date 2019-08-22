@@ -7,7 +7,7 @@ module RouteDirections
       DEFAULT_DISTANCE = 100
       ADMISSIBLE = 0.75
 
-      attr_reader :distance, :time, :polyline, :status, :steps
+      attr_reader :distance, :time, :polyline, :status, :status_code, :steps
       attr_reader :http_response
 
       def initialize(http_response = nil)
@@ -60,10 +60,13 @@ module RouteDirections
 
         if valids == @statuses.size
           @status = 'OK'
+          @status_coode = 200
         elsif valids >= (ADMISSIBLE * @statuses.size)
           @status = 'Approached'
+          @status_coode = 206
         else
           @status = 'Error'
+          @status_coode = 408
         end
       end
     end
