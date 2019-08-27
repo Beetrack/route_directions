@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    route_directions (0.0.1)
+      fast-polylines (~> 1.0.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    fast-polylines (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  route_directions!
+
+BUNDLED WITH
+   2.0.2

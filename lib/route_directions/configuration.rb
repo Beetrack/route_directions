@@ -3,7 +3,7 @@ require 'ostruct'
 
 module RouteDirections
   AVAILABLE_PROVIDERS = %w[Google Osrm].freeze
-  OPTION_KEYS = %w[key host max_waypoint_size max_tries].freeze
+  OPTION_KEYS = %w[key host headers max_waypoint_size max_tries].freeze
 
   def self.configure(options)
     Configuration.instance.options = options
@@ -55,6 +55,7 @@ module RouteDirections
       unless AVAILABLE_PROVIDERS.include? provider
         raise ArgumentError, 'Invalid provider'
       end
+
       @options[provider.downcase.to_sym] = OpenStruct.new(options)
       @default_provider = provider
     end
@@ -64,6 +65,7 @@ module RouteDirections
       AVAILABLE_PROVIDERS.each do |provider|
         provider_symbol = provider.downcase.to_sym
         next unless options.key? provider_symbol
+
         single_provider(options[provider_symbol].merge(shared_options), provider)
       end
     end
