@@ -4,8 +4,7 @@ require 'route_directions/configuration'
 module RouteDirections
   module Clients
     class Base
-      MAX_WAYPOINTS = 9
-      MAX_TRIES = 3
+      MAX_WAYPOINTS = 23
       attr_reader :origin, :destination, :waypoints, :options
 
       def initialize(origin, destination, options)
@@ -18,25 +17,24 @@ module RouteDirections
 
       def response
         total_waypoints = whole_path
-        response = response_class.new
+        response = response_class.new(self)
 
         while (size = total_waypoints.size) > 1 && continue?
           response.http_response = assure_response(
             total_waypoints.shift,
             total_waypoints.shift([max_waypoints, size - 2].min),
-            total_waypoints.first,
-            @options[:departure_time]
+            total_waypoints.first
           )
         end
 
         response
       end
 
-      private
-
-      def valid?
-        raise NotImplementedError, 'Called abstract method valid?'
+      def max_waypoints
+        raise NotImplementedError, 'Called abstract method max_waypoints'
       end
+
+      private
 
       def abort?
         raise NotImplementedError, 'Called abstract method abort?'
@@ -54,45 +52,19 @@ module RouteDirections
         raise NotImplementedError, 'Called abstract method parameters'
       end
 
-      def max_waypoints
-        raise NotImplementedError, 'Called abstract method max_waypoints'
-      end
-
       def max_tries
         raise NotImplementedError, 'Called abstract method max_tries'
-      end
-
-      def key
-        raise NotImplementedError, 'Called abstract method key'
-      end
-
-      def host
-        raise NotImplementedError, 'Called abstract method host'
       end
 
       def continue?
         @continue
       end
 
-      def assure_response(origin, waypoints, destination, departure_time)
-        response = request(origin, waypoints, destination, departure_time).execute
+      def assure_response(origin, waypoints, destination)
+        response = request(origin, waypoints, destination).execute
+        @continue = false if abort?(response)
 
-        if abort?(response)
-          @continue = false
-        elsif !valid?(response)
-          response = retry_request(origin, waypoints, destination, departure_time)
-        end
         response
-      end
-
-      def retry_request(origin, waypoints, destination, departure_time)
-        @retries = (@retries || max_tries) - 1
-        if @retries > 1
-          sleep 1
-          assure_response(origin, waypoints, destination, departure_time)
-        else
-          Net::HTTPError.new('ErrorConnection', nil)
-        end
       end
 
       def whole_path
@@ -105,6 +77,7 @@ module RouteDirections
 
       def process_waypoints(waypoints)
         return nil unless waypoints.respond_to? :map
+
         waypoints.map { |waypoint| process_point_parameter(waypoint) }
       end
 
@@ -112,6 +85,7 @@ module RouteDirections
         unless parameter.respond_to? :[]
           raise ArgumentError, 'Invalid parameters for request directions'
         end
+
         validate_coordinates(parameter[0], parameter[1])
       end
 
@@ -122,6 +96,7 @@ module RouteDirections
         if !is_latitude_valid || !is_longitude_valid
           raise ArgumentError, 'Invalid latitude or longitude value'
         end
+
         [latitude, longitude]
       end
 

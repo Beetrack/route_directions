@@ -1,9 +1,11 @@
 require 'route_directions/configuration'
+require 'route_directions/clients/google'
+require 'route_directions/clients/osrm'
 require 'date'
 
 module RouteDirections
   class Query
-    DEFAULT_PROVIDER = 'Google'
+    DEFAULT_PROVIDER = 'Google'.freeze
 
     attr_reader :client
 
@@ -14,7 +16,6 @@ module RouteDirections
         raise ArgumentError, 'Invalid provider'
       end
 
-      require "route_directions/clients/#{provider.downcase}"
       @client = RouteDirections::Clients.const_get(provider)
                                         .new(origin, destination, opt)
     end

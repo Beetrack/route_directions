@@ -8,12 +8,19 @@ module RouteDirections
         RouteDirections::Responses::Osrm
       end
 
+      def max_waypoints
+        options[:max_waypoint_size] ||
+          Configuration.instance.osrm_options.max_waypoint_size ||
+          MAX_WAYPOINTS
+      end
+
       private
 
-      def request(origin, waypoints, destination, departure_time)
+      def request(origin, waypoints, destination)
         Request.new(
           provider_url(origin, waypoints, destination),
           parameters,
+          headers,
           max_tries
         )
       end
@@ -35,33 +42,31 @@ module RouteDirections
       end
 
       def base_url
-        host + '/route/v1/driving/'
+        if options[:optimize]
+          host + '/trip/v1/driving/'
+        else
+          host + '/route/v1/driving/'
+        end
       end
 
-      def valid?(response)
-        true
-      end
-
-      def abort?(response)
+      def abort?(_response)
         false
-      end
-
-      def max_waypoints
-        options[:max_waypoint_size] ||
-          Configuration.instance.osrm_options.max_waypoint_size ||
-          MAX_WAYPOINTS
       end
 
       def max_tries
         options[:max_retries] ||
-          Configuration.instance.osrm_options.max_tries ||
-          MAX_TRIES
+          Configuration.instance.osrm_options.max_tries
       end
 
       def host
         options[:host] ||
           Configuration.instance.osrm_options.host ||
           'https://router.project-osrm.org'
+      end
+
+      def headers
+        options[:headers] ||
+          Configuration.instance.osrm_options.headers
       end
     end
   end
