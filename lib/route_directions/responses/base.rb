@@ -62,13 +62,13 @@ module RouteDirections
 
         if valids == @statuses.size
           @status = 'OK'
-          @status_coode = 200
+          @status_code = 200
         elsif valids >= (ADMISSIBLE * @statuses.size)
           @status = 'Approached'
-          @status_coode = 206
+          @status_code = 206
         else
           @status = 'Error'
-          @status_coode = 408
+          @status_code = 408
         end
       end
 
