@@ -1,3 +1,5 @@
+$:.push File.expand_path('lib', __dir__)
+
 require 'route_directions/version'
 
 Gem::Specification.new do |s|
