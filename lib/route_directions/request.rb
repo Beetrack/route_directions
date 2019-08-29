@@ -26,10 +26,11 @@ module RouteDirections
     def assemble_http_and_path
       uri = URI(provider_url)
       http = Net::HTTP.new(uri.host, uri.port)
+      http.use_ssl = true if uri.scheme == 'https'
       http.read_timeout = TIMEOUT
       http.open_timeout = TIMEOUT
       path = uri.path
-      path + "?#{URI.encode_www_form(parameters)}" if parameters.any?
+      path += "?#{URI.encode_www_form(parameters)}" if parameters.any?
       [http, path]
     end
 
