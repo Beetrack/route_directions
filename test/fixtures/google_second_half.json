@@ -1,0 +1,180 @@
+{
+    "geocoded_waypoints": [],
+    "routes": [
+        {
+            "bounds": { },
+            "legs": [
+                {
+                    "distance": {
+                        "text": "6.9 km",
+                        "value": 6939
+                    },
+                    "duration": {
+                        "text": "18 mins",
+                        "value": 1090
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "3.0 km",
+                                "value": 3000
+                            },
+                            "duration": {
+                                "text": "8 mins",
+                                "value": 500
+                            },
+                            "polyline": {
+                                "points": "vtlkE~|jnLqXqKiU_LjFoJdCaJzGwYvDsP~D}WdG}_@bIye@"
+                            }
+                        },
+                        {
+                            "distance": {
+                                "text": "3.9 km",
+                                "value": 3939
+                            },
+                            "duration": {
+                                "text": "10 mins",
+                                "value": 590
+                            },
+                            "polyline": {
+                                "points": "namkE~qcnLFiHb@cU`By^JcGZeVV{Zy@wM`[eE\\jB"
+                            }
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "9.4 km",
+                        "value": 9409
+                    },
+                    "duration": {
+                        "text": "20 mins",
+                        "value": 1181
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "5.0 km",
+                                "value": 5000
+                            },
+                            "duration": {
+                                "text": "10 mins",
+                                "value": 600
+                            },
+                            "polyline": {
+                                "points": "|bnkEdj_nLFoBf@cC|[eEpMqA_@h\\qAxj@oAhh@Bfh@eMb~@"
+                            }
+                        },
+                        {
+                            "distance": {
+                                "text": "4.4 km",
+                                "value": 4409
+                            },
+                            "duration": {
+                                "text": "10 mins",
+                                "value": 581
+                            },
+                            "polyline": {
+                                "points": "bonkEbhgnLcFhXyEvWeFlT_Tn]_Vh]{MrP{P`W_PhTZ|S"
+                            }
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "20.6 km",
+                        "value": 20608
+                    },
+                    "duration": {
+                        "text": "22 mins",
+                        "value": 1313
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "10.0 km",
+                                "value": 10000
+                            },
+                            "duration": {
+                                "text": "12 mins",
+                                "value": 700
+                            },
+                            "polyline": {
+                                "points": "jsjkEd{nnLeNzWbPu^c]w`AaB~BeY|Liq@nBi|AhVqaA}@oeA~A"
+                            }
+                        },
+                        {
+                            "distance": {
+                                "text": "10.0 km",
+                                "value": 10608
+                            },
+                            "duration": {
+                                "text": "10 mins",
+                                "value": 613
+                            },
+                            "polyline": {
+                                "points": "bi}jEx_nnLoz@hTcz@j^qiAmX{`@uLgv@p[sTok@fRc_Bha@kvAx`@_H"
+                            }
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "15.1 km",
+                        "value": 15104
+                    },
+                    "duration": {
+                        "text": "26 mins",
+                        "value": 1584
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "7.0 km",
+                                "value": 7000
+                            },
+                            "duration": {
+                                "text": "10 mins",
+                                "value": 600
+                            },
+                            "polyline": {
+                                "points": "v{wjEzognL|JwF`Xi@fTnZxGhq@zWzaAnZ\\dq@}Fpb@iJbb@cd@"
+                            }
+                        },
+                        {
+                            "distance": {
+                                "text": "8.1 km",
+                                "value": 8104
+                            },
+                            "duration": {
+                                "text": "16 mins",
+                                "value": 984
+                            },
+                            "polyline": {
+                                "points": "pg`kEvdhnL~_@uHdv@l@fc@kEh]_GlTkHjm@[r\\wEoAal@_Eav@"
+                            }
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": "ns`kEb`{mLuz@n|A`GphAfy@lhD{FfnAlpC_Sh`CiTtzBszAbq@hPyk@myAw~BoJh~AgvAbiBpI}l@j}Hki@ewBld@yzDno@yI_d@dfHc}BbfFcSipA{bBhQk_GjNguFd[obBbMbzB}cFlQgT~}@vvAfpCzQrxC{uAruB{V"
+            },
+            "warnings": [],
+            "waypoint_order": [
+                0,
+                1,
+                2
+            ]
+        }
+    ],
+    "status": "OK"
+}
