@@ -1,0 +1,141 @@
+{
+    "code": "Ok",
+    "routes": [
+        {
+            "geometry": "fs`kEl_{mL|EfB|ElZvNoCxXzsCta@`|BlcDgk@rBlr@bTYlHwHpqCqPtFqAgl@dDdDmfAmhBhJyV{W_DmhAbaAqGjCh\\eKrs@o^fr@qGnvA`_D`k@qWbuA}c@~j@",
+            "legs": [
+                {
+                    "steps": [
+                        {
+                            "intersections": [],
+                            "geometry": "fs`kEl_{mLrG|HtLjQlMz[zC`VCdS`DbW|Djc@dGl\\|Et[",
+                            "mode": "driving",
+                            "duration": 13,
+                            "weight": 13,
+                            "distance": 82.9
+                        },
+                        {
+                            "intersections": [],
+                            "geometry": "jxbkEribnL|Llj@pEhRpl@qH`_AqO`x@fGfUlZzEgGpi@gDx}@wG",
+                            "mode": "driving",
+                            "duration": 13.5,
+                            "weight": 13.5,
+                            "distance": 104.2
+                        }
+                    ],
+                    "distance": 12141.1,
+                    "duration": 839,
+                    "weight": 839
+                },
+                {
+                    "steps": [
+                        {
+                            "intersections": [],
+                            "geometry": "pfnkErvcnLy@u@iVrA_K}BH_JV_Mt@{Tz@}PiELkGfB",
+                            "mode": "driving",
+                            "duration": 13.1,
+                            "weight": 13.1,
+                            "distance": 133
+                        },
+                        {
+                            "intersections": [],
+                            "geometry": "jckkElyanLuFuAgFNoFlCwFdDcDa@wMgMcKsKuBkRe@}U",
+                            "mode": "driving",
+                            "duration": 67.4,
+                            "weight": 67.4,
+                            "distance": 836.6
+                        }
+                    ],
+                    "distance": 5647.5,
+                    "duration": 433.9,
+                    "weight": 433.9
+                },
+                {
+                    "steps": [
+                        {
+                            "intersections": [],
+                            "geometry": "|_ikExz~mLbaAqGjCh\\w@vGwFd`@wGhPqJxQgGxJsBvH_AfC",
+                            "mode": "driving",
+                            "duration": 9.5,
+                            "weight": 9.5,
+                            "distance": 52.6
+                        },
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "|xikEzjcnLeBdKcBxIIrNlIl\\`[|FfTzDf_@lG~]nGjYnF",
+                            "mode": "driving",
+                            "duration": 94.4,
+                            "weight": 94.4,
+                            "distance": 1180.6
+                        }
+                    ],
+                    "distance": 7749.8,
+                    "duration": 520.3,
+                    "weight": 520.3
+                },
+                {
+                    "steps": [
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "frnkE~zfnLs@pEOz@uAbIiBtKyAlIg@dCk@~C_BnIi@vC",
+                            "mode": "driving",
+                            "duration": 12.3,
+                            "weight": 12.3,
+                            "distance": 101.8
+                        },
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "fzmkEzoinLu@rB{@xB{BnDyB|CsDbF_CdDQV{H`LsA~A",
+                            "mode": "driving",
+                            "duration": 133.9,
+                            "weight": 133.9,
+                            "distance": 2155.1
+                        }
+                    ],
+                    "distance": 2326.4,
+                    "duration": 150.7,
+                    "weight": 150.7
+                }
+            ],
+            "distance": 27864.8,
+            "duration": 1943.9,
+            "weight_name": "routability",
+            "weight": 1943.9
+        }
+    ],
+    "waypoints": [
+        {
+            "location": [
+                -70.594626,
+                -33.431717
+            ]
+        },
+        {
+            "location": [
+                -70.639295,
+                -33.501367
+            ]
+        },
+        {
+            "location": [
+                -70.614372,
+                -33.474714
+            ]
+        },
+        {
+            "location": [
+                -70.655358,
+                -33.503238
+            ]
+        },
+        {
+            "location": [
+                -70.676178,
+                -33.493395
+            ]
+        }
+    ]
+}

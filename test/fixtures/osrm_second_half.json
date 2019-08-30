@@ -1,0 +1,146 @@
+{
+    "code": "Ok",
+    "routes": [
+        {
+            "geometry": "hjokEvscnLyS||Aa]fcB}xAjrBaI|p@oN`X`Ru]y^cy@ZgHaa@|R{jA|BuhAnViuBKk`AaIgr@pKsbAp\\iBeOvQohAua@gwAwGit@qx@lASsKe@yHlcBnBfE|b@",
+            "legs": [
+                {
+                    "steps": [
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "vtlkEb}jnL_K{DmEcBoIgD{QqHIa@pEyIdDmKtDgPrDyO",
+                            "mode": "driving",
+                            "duration": 65.7,
+                            "weight": 65.7,
+                            "distance": 914.4
+                        },
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "|flkE|`gnL~EyZ~Eo[|DeVbEeWT_NXsNhAo\\v@gPTsR",
+                            "mode": "driving",
+                            "duration": 85.3,
+                            "weight": 85.3,
+                            "distance": 1175.6
+                        }
+                    ],
+                    "distance": 6674.4,
+                    "duration": 512.5,
+                    "weight": 512.5
+                },
+                {
+                    "steps": [
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "hcnkEdl_nLfBrImDtVrYuDtQmCaA|^gAda@H`a@qG~p@uL`{@",
+                            "mode": "driving",
+                            "duration": 7.9,
+                            "weight": 7.9,
+                            "distance": 34
+                        },
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "dbnkErvhnLcDvPaMjXiUr[oI~LuHdKaSpX}QdVoAdKjA|I",
+                            "mode": "driving",
+                            "duration": 55.6,
+                            "weight": 55.6,
+                            "distance": 537.1
+                        }
+                    ],
+                    "distance": 9218.6,
+                    "duration": 648.1,
+                    "weight": 648.1
+                },
+                {
+                    "steps": [
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "lsjkEf{nnL}MbXbP}YuV{o@{DiUa@pB{T|Iy^dFyoAdI{|ApK",
+                            "mode": "driving",
+                            "duration": 10.8,
+                            "weight": 10.8,
+                            "distance": 193.9
+                        },
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "bm~jE`wmnLs\\|Fs[vDw`AhYqA}LvPo|@kJos@eO_c@eKap@{OoN",
+                            "mode": "driving",
+                            "duration": 38.3,
+                            "weight": 38.3,
+                            "distance": 282.5
+                        }
+                    ],
+                    "distance": 16166.9,
+                    "duration": 992.7,
+                    "weight": 992.7
+                },
+                {
+                    "steps": [
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "t{wjEzognL`IeGlWWjJpAxSNp_@MxGt`@dMiJxAy@|DaB",
+                            "mode": "driving",
+                            "duration": 11.7,
+                            "weight": 11.7,
+                            "distance": 42.9
+                        },
+                        {
+                            "intersections": [],
+                            "driving_side": "right",
+                            "geometry": "br}jEldgnL`j@qH|r@_NxIcf@rK{UpVjDfRjAfHsEx|@eOheAkQ",
+                            "mode": "driving",
+                            "duration": 7.5,
+                            "weight": 7.5,
+                            "distance": 30
+                        }
+                    ],
+                    "distance": 11913.6,
+                    "duration": 828,
+                    "weight": 828
+                }
+            ],
+            "distance": 43973.5,
+            "duration": 2981.3,
+            "weight_name": "routability",
+            "weight": 2981.3
+        }
+    ],
+    "waypoints": [
+        {
+            "location": [
+                -70.676178,
+                -33.493395
+            ]
+        },
+        {
+            "location": [
+                -70.617145,
+                -33.50085
+            ]
+        },
+        {
+            "location": [
+                -70.69636,
+                -33.482945
+            ]
+        },
+        {
+            "location": [
+                -70.658699,
+                -33.386991
+            ]
+        },
+        {
+            "location": [
+                -70.628696,
+                -33.464756
+            ]
+        }
+    ]
+}

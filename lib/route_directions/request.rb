@@ -37,8 +37,7 @@ module RouteDirections
     def execute_request(http, path)
       response = http.get(path, headers)
 
-      case response
-      when Net::HTTPSuccess
+      if response.is_a? Net::HTTPSuccess
         response
       else
         retry_execute
