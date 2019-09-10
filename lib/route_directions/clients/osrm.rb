@@ -38,7 +38,11 @@ module RouteDirections
       end
 
       def parameters
-        { steps: true }
+        if options[:optimize]
+          { steps: true, destination: 'last', source: 'first', roundtrip: false }
+        else
+          { steps: true }
+        end
       end
 
       def base_url

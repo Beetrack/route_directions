@@ -72,6 +72,7 @@ module RouteDirections
         new_index = waypoints_json.index do |waypoint|
           waypoint['waypoint_index'] == index
         end
+
         waypoint_order_by_index(new_index)
       end
     end
