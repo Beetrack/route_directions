@@ -103,7 +103,7 @@ module RouteDirections
       def all_waypoints
         @all_waypoints ||= begin
           [@client_context.origin] +
-            @client_context.waypoints +
+            @client_context.waypoints.to_a +
             [@client_context.destination]
         end
       end
