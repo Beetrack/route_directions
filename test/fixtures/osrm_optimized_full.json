@@ -1,0 +1,1481 @@
+{
+    "code": "Ok",
+    "trips": [
+        {
+            "geometry": "fs`kEl_{mL_hA~ZwNvRcKd|@sHvJeTjEap@iMi`@dWa[h_AmeAbcB}a@vvAvaAn@d@xHRrKnw@iAtGxu@v`@p{A}PraAf@dT|eAq_@zr@}Kn_A|HjtBTzmAoWtrAkErp@rv@oN`X|Xap@d@qXbw@sdAmA}EzCjAr^aj@~WmxAuBrOz[uyB{c@tDtFqA}I{fCv@yJurAvQ_oA~[m@it@G_EoXp@xDx}@yh@|SMfI",
+            "legs": [
+                {
+                    "steps": [
+                        {
+                            "driving_side": "right",
+                            "geometry": "fs`kEl_{mL@HBJ",
+                            "mode": "driving",
+                            "duration": 3.2,
+                            "maneuver": {
+                                "bearing_after": 250,
+                                "type": "depart",
+                                "modifier": "left",
+                                "bearing_before": 0,
+                                "location": [
+                                    -70.594626,
+                                    -33.431717
+                                ]
+                            },
+                            "weight": 3.2,
+                            "distance": 10.9,
+                            "name": "La Brabanzon"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "ls`kEb`{mLMB_Dz@kD|@iCr@KBIB_Cl@MDODkD~@kD~@G@yDdAMDMDuD~@uDdAsD`A{DdAMDQFeElAUFe@NUFi@N",
+                            "mode": "driving",
+                            "duration": 131.3,
+                            "maneuver": {
+                                "bearing_after": 341,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 251,
+                                "location": [
+                                    -70.594736,
+                                    -33.431752
+                                ]
+                            },
+                            "weight": 131.3,
+                            "distance": 1349.8,
+                            "name": "Avenida El Bosque"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`k~jEd{{mLYFSZg@v@U`@_@x@wCbEc@j@CBKJa@\\MN",
+                            "mode": "driving",
+                            "duration": 24.5,
+                            "maneuver": {
+                                "bearing_after": 345,
+                                "type": "turn",
+                                "modifier": "slight left",
+                                "bearing_before": 341,
+                                "location": [
+                                    -70.599072,
+                                    -33.420169
+                                ]
+                            },
+                            "weight": 24.5,
+                            "distance": 316.8,
+                            "name": "Avenida Tobalaba"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "x~}jEjj|mLIJa@J[FWd@MV[z@[dAU|A?BI`AGxACj@AZEXKp@GTGP",
+                            "mode": "driving",
+                            "duration": 33,
+                            "maneuver": {
+                                "bearing_after": 313,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 322,
+                                "location": [
+                                    -70.601496,
+                                    -33.418211
+                                ]
+                            },
+                            "weight": 33,
+                            "distance": 359,
+                            "name": "Avenida Tajamar"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "bw}jEd_}mLIREJm@tAKT_A~Bi@nACJA^C^AlAA`C",
+                            "mode": "driving",
+                            "duration": 22.1,
+                            "maneuver": {
+                                "bearing_after": 300,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 299,
+                                "location": [
+                                    -70.604826,
+                                    -33.416978
+                                ]
+                            },
+                            "weight": 22.1,
+                            "distance": 323,
+                            "name": "Nueva Tajamar"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`q}jE|r}mL?RBLHTLb@DLBPBP?X?NE\\SdBUfBUlB_@dDEV",
+                            "mode": "driving",
+                            "duration": 30.8,
+                            "maneuver": {
+                                "bearing_after": 264,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 271,
+                                "location": [
+                                    -70.607992,
+                                    -33.416005
+                                ]
+                            },
+                            "weight": 30.8,
+                            "distance": 345.8,
+                            "name": "Avenida El Cerro"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "~n}jEli~mLAPEXE\\ERIXEPGTGRUj@IPIRQROTONONYV]VWR",
+                            "mode": "driving",
+                            "duration": 21.4,
+                            "maneuver": {
+                                "bearing_after": 282,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 282,
+                                "location": [
+                                    -70.611591,
+                                    -33.415681
+                                ]
+                            },
+                            "weight": 21.4,
+                            "distance": 238.5,
+                            "name": "Acceso Túnel San Cristóbal"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "ng}jE`v~mL[T{@j@gAf@_Br@uAf@yA^mAVsAJsADwAAkAI_BUsAYgBg@sRyFkCs@iAWeAScAKcAE_B?aABkAL_ANoAXyAb@mAl@{Ax@wAbAiAjAmAtA",
+                            "mode": "driving",
+                            "duration": 102,
+                            "maneuver": {
+                                "bearing_after": 326,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 326,
+                                "location": [
+                                    -70.613608,
+                                    -33.414477
+                                ]
+                            },
+                            "weight": 102,
+                            "distance": 1811.8,
+                            "name": "Túnel San Cristóbal"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "~gzjEn}~mLiB|AgAjAu@t@{A|A",
+                            "mode": "driving",
+                            "duration": 13.1,
+                            "maneuver": {
+                                "bearing_after": 323,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 316,
+                                "location": [
+                                    -70.614804,
+                                    -33.399198
+                                ]
+                            },
+                            "weight": 13.1,
+                            "distance": 232.8,
+                            "name": "Salida Túnel San Cristóbal"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "z}yjElg_nLU\\OVQZKVKXKXGZIZI`@Gd@G^[pCIh@Ih@Mh@K^Kb@Sl@Wt@aDjI_GdPaAbCq@dBIRmB`EeGpKyEdHmHvKqDzFgBrCoO`UyHfLuBpDmAzBYh@g@hA]p@w@dBw@lBaAhC_A|CCJcApDmAfEwAbFqDnM",
+                            "mode": "driving",
+                            "duration": 176.2,
+                            "maneuver": {
+                                "bearing_after": 312,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 319,
+                                "location": [
+                                    -70.616391,
+                                    -33.39758
+                                ]
+                            },
+                            "ref": "70",
+                            "weight": 176.2,
+                            "distance": 3818,
+                            "name": "Autopista Vespucio Norte Express"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "zgvjEh{enLuDxK",
+                            "mode": "driving",
+                            "duration": 17.3,
+                            "maneuver": {
+                                "bearing_after": 296,
+                                "type": "off ramp",
+                                "modifier": "slight right",
+                                "bearing_before": 293,
+                                "location": [
+                                    -70.650289,
+                                    -33.378701
+                                ]
+                            },
+                            "weight": 17.3,
+                            "distance": 216.1,
+                            "name": "Salida Autopista Vespucio Norte Express"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "dbvjEbhfnLENK`@sA`FGZ_CzI{@xCCJMb@Qv@",
+                            "mode": "driving",
+                            "duration": 41.6,
+                            "maneuver": {
+                                "bearing_after": 293,
+                                "type": "turn",
+                                "modifier": "straight",
+                                "bearing_before": 296,
+                                "location": [
+                                    -70.652343,
+                                    -33.377789
+                                ]
+                            },
+                            "weight": 41.6,
+                            "distance": 461.2,
+                            "name": "Avenida Américo Vespucio Norte"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "vwujEpdgnLDB`Ab@FBZJJBHBX@L@H@r@BHDLFhA`@t@X^HZDX@v@@hBGlAALAnAC^AhAC`BEv@CxBGJ?RAr@Al@A\\?`@C`@Ad@A`@CLAx@EZBv@Ev@IVKd@C`@Ed@C^Cv@CV?bBGzA?",
+                            "mode": "driving",
+                            "duration": 87.8,
+                            "maneuver": {
+                                "bearing_after": 205,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 291,
+                                "location": [
+                                    -70.656886,
+                                    -33.376117
+                                ]
+                            },
+                            "weight": 87.8,
+                            "distance": 1205.9,
+                            "name": "El Guanaco"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "nzwjE`fgnL?VQpDAV",
+                            "mode": "driving",
+                            "duration": 13.2,
+                            "maneuver": {
+                                "bearing_after": 275,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 180,
+                                "location": [
+                                    -70.657133,
+                                    -33.386804
+                                ]
+                            },
+                            "weight": 13.2,
+                            "distance": 105.6,
+                            "name": "Avenida Los Zapadores"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "zywjEbmgnLt@C",
+                            "mode": "driving",
+                            "duration": 6.5,
+                            "maneuver": {
+                                "bearing_after": 174,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 274,
+                                "location": [
+                                    -70.658263,
+                                    -33.386701
+                                ]
+                            },
+                            "weight": 6.5,
+                            "distance": 30,
+                            "name": "Cacique Guacondo"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "p{wjE~lgnLBzA",
+                            "mode": "driving",
+                            "duration": 6.2,
+                            "maneuver": {
+                                "bearing_after": 265,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 174,
+                                "location": [
+                                    -70.658238,
+                                    -33.38697
+                                ]
+                            },
+                            "weight": 6.2,
+                            "distance": 42.9,
+                            "name": "Cacique Ainavilo"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "t{wjEzognL",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": "left",
+                                "bearing_before": 267,
+                                "location": [
+                                    -70.658699,
+                                    -33.386991
+                                ]
+                            },
+                            "weight": 0,
+                            "distance": 0,
+                            "name": "Cacique Ainavilo"
+                        }
+                    ],
+                    "distance": 10867.9,
+                    "duration": 730.2,
+                    "summary": "Avenida El Bosque, Autopista Vespucio Norte Express",
+                    "weight": 730.2
+                },
+                {
+                    "steps": [
+                        {
+                            "driving_side": "right",
+                            "geometry": "t{wjEzognLDnCDdCF|B",
+                            "mode": "driving",
+                            "duration": 32.2,
+                            "maneuver": {
+                                "bearing_after": 267,
+                                "type": "depart",
+                                "modifier": "left",
+                                "bearing_before": 0,
+                                "location": [
+                                    -70.658699,
+                                    -33.386991
+                                ]
+                            },
+                            "weight": 32.2,
+                            "distance": 187.7,
+                            "name": "Cacique Ainavilo"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "h|wjEn|gnLz@CdAE`AC`AA`AE~@E`BEx@?j@Cz@ElAEzACfAA~BIpAC^A|@CXAV@p@@~@DXDNDd@Xl@ZZJT?jAW`Ds@FAVE",
+                            "mode": "driving",
+                            "duration": 70.8,
+                            "maneuver": {
+                                "bearing_after": 175,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 265,
+                                "location": [
+                                    -70.660716,
+                                    -33.387092
+                                ]
+                            },
+                            "weight": 70.8,
+                            "distance": 1019.5,
+                            "name": "Avenida General Gambino"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "xtyjEdzgnL`@jEPnBbAzLj@hGj@|G`@vFLdBB\\FTHf@Lh@Rf@@BDLFNFJJRDJBD~AvDJVLXRv@Nn@LjANhABZ",
+                            "mode": "driving",
+                            "duration": 110.7,
+                            "maneuver": {
+                                "bearing_after": 257,
+                                "type": "end of road",
+                                "modifier": "right",
+                                "bearing_before": 167,
+                                "location": [
+                                    -70.66035,
+                                    -33.396131
+                                ]
+                            },
+                            "weight": 110.7,
+                            "distance": 1184,
+                            "name": "Avenida Dorsal"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "~ezjEhfjnL`BhGlBpHpBpH|BrItArFTz@Rv@Np@XfARbAp@fC",
+                            "mode": "driving",
+                            "duration": 78.2,
+                            "maneuver": {
+                                "bearing_after": 246,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 255,
+                                "location": [
+                                    -70.672533,
+                                    -33.398883
+                                ]
+                            },
+                            "weight": 78.2,
+                            "distance": 963.2,
+                            "name": "Roma"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "n{zjExalnL\\rAt@rCP|@FZDZBXBj@?Z?VEj@Cf@i@bE[`CKz@k@dEKt@Eb@G^EZKp@UrAGXkArEq@|BM`@GRGTGRGRM^Q^Q^u@`CaAhGYnBKfAIjAEbB?bBFz@Fz@Dj@VzAThA",
+                            "mode": "driving",
+                            "duration": 133.7,
+                            "maneuver": {
+                                "bearing_after": 246,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 246,
+                                "location": [
+                                    -70.682054,
+                                    -33.402318
+                                ]
+                            },
+                            "weight": 133.7,
+                            "distance": 1556.2,
+                            "name": "Avenida Jaime Guzmán"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "pnzjEjeonLh@S`FiBxEeBfC_ApBy@`Cs@",
+                            "mode": "driving",
+                            "duration": 30.6,
+                            "maneuver": {
+                                "bearing_after": 157,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 250,
+                                "location": [
+                                    -70.69798,
+                                    -33.40025
+                                ]
+                            },
+                            "weight": 30.6,
+                            "distance": 516.5,
+                            "name": "Avenida Apóstol Santiago"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "ri{jExxnnLj@e@lAe@bAk@",
+                            "mode": "driving",
+                            "duration": 9.6,
+                            "maneuver": {
+                                "bearing_after": 144,
+                                "type": "on ramp",
+                                "modifier": "slight left",
+                                "bearing_before": 160,
+                                "location": [
+                                    -70.695967,
+                                    -33.404578
+                                ]
+                            },
+                            "weight": 9.6,
+                            "distance": 119.5,
+                            "name": "Autopista Central"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "po{jE`unnLlHuCfH}BvBi@tEyAfBi@bBe@r@UXITGXITEZGj@Ip@Iv@KnAMhBOtCUpCUjAMl@Ih@KdASt@Q`H}AbBa@pBi@\\IZEZEXEXCXAR?Z?X@P@~CT|J`AdEb@bBNlAHnALpE^tC\\bD\\|ALbF`@dBJdHH`JLrBDjA?nCA~CI|IWf@AZE\\Ed@IxBm@~A]XEd@Eh@?`CJrFd@zDRtGPvA@`BBv@AxCH|I\\x@Bp@Bx@@p@An@Ad@C^E\\EVEt@MhFyAfXgGzG}AdAWzLkC~DaAvCk@pBWbG_@zCG`C?|K?zCLz@?pAAtAE|@Ej@ArFA",
+                            "mode": "driving",
+                            "duration": 324.8,
+                            "maneuver": {
+                                "bearing_after": 156,
+                                "type": "merge",
+                                "modifier": "slight left",
+                                "bearing_before": 150,
+                                "location": [
+                                    -70.695373,
+                                    -33.405528
+                                ]
+                            },
+                            "ref": "74",
+                            "weight": 324.8,
+                            "distance": 7313.9,
+                            "name": "Autopista Central"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`chkErhmnLZJd@@p@Bb@BVD`@F",
+                            "mode": "driving",
+                            "duration": 9.5,
+                            "maneuver": {
+                                "bearing_after": 198,
+                                "type": "off ramp",
+                                "modifier": "slight right",
+                                "bearing_before": 178,
+                                "location": [
+                                    -70.688258,
+                                    -33.470085
+                                ]
+                            },
+                            "weight": 9.5,
+                            "distance": 118.7,
+                            "name": "Autopista Central"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "rihkEvimnL^Gb@CfDBx@AVAPA\\EPETETIXKpB{@z@]p@[",
+                            "mode": "driving",
+                            "duration": 33,
+                            "maneuver": {
+                                "bearing_after": 168,
+                                "type": "turn",
+                                "modifier": "slight left",
+                                "bearing_before": 191,
+                                "location": [
+                                    -70.688437,
+                                    -33.471137
+                                ]
+                            },
+                            "weight": 33,
+                            "distance": 391.6,
+                            "name": "Avenida San Alberto Hurtado"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "x~hkEjdmnLRGTEREPANAL?L@JBNFLFJHTP",
+                            "mode": "driving",
+                            "duration": 17.8,
+                            "maneuver": {
+                                "bearing_after": 161,
+                                "type": "turn",
+                                "modifier": "slight right",
+                                "bearing_before": 154,
+                                "location": [
+                                    -70.687582,
+                                    -33.474525
+                                ]
+                            },
+                            "weight": 17.8,
+                            "distance": 118.5,
+                            "name": "Acceso Avenida Pedro Aguirre Cerda"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`eikEdemnLrDtFdBrCRVZd@HJd@h@p@l@dBzAzArAdKbJd@d@zClCdAz@fCpBpBrB^`@",
+                            "mode": "driving",
+                            "duration": 72.3,
+                            "maneuver": {
+                                "bearing_after": 227,
+                                "type": "turn",
+                                "modifier": "straight",
+                                "bearing_before": 215,
+                                "location": [
+                                    -70.687712,
+                                    -33.475525
+                                ]
+                            },
+                            "weight": 72.3,
+                            "distance": 1143.5,
+                            "name": "Avenida Pedro Aguirre Cerda"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "vujkE|vnnLQh@IV[p@QT",
+                            "mode": "driving",
+                            "duration": 4.2,
+                            "maneuver": {
+                                "bearing_after": 299,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 219,
+                                "location": [
+                                    -70.69567,
+                                    -33.483322
+                                ]
+                            },
+                            "weight": 4.2,
+                            "distance": 77,
+                            "name": "Avenida Suiza"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "lsjkEf{nnL",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "location": [
+                                    -70.69636,
+                                    -33.482945
+                                ],
+                                "bearing_before": 315,
+                                "type": "arrive"
+                            },
+                            "weight": 0,
+                            "distance": 0,
+                            "name": "Avenida Suiza"
+                        }
+                    ],
+                    "distance": 14709.9,
+                    "duration": 927.4,
+                    "summary": "Avenida Jaime Guzmán, Autopista Central",
+                    "weight": 927.4
+                },
+                {
+                    "steps": [
+                        {
+                            "driving_side": "right",
+                            "geometry": "lsjkEf{nnLGHsCnEeAdB",
+                            "mode": "driving",
+                            "duration": 10.8,
+                            "maneuver": {
+                                "bearing_after": 315,
+                                "location": [
+                                    -70.69636,
+                                    -33.482945
+                                ],
+                                "bearing_before": 0,
+                                "type": "depart"
+                            },
+                            "weight": 10.8,
+                            "distance": 193.9,
+                            "name": "Avenida Suiza"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "jljkEfeonL{A|AYTURkCfEGNEP?PLhA",
+                            "mode": "driving",
+                            "duration": 38.3,
+                            "maneuver": {
+                                "bearing_after": 317,
+                                "type": "turn",
+                                "modifier": "slight right",
+                                "bearing_before": 309,
+                                "location": [
+                                    -70.697956,
+                                    -33.481819
+                                ]
+                            },
+                            "weight": 38.3,
+                            "distance": 282.5,
+                            "name": "Cruce Salvador Allende"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "rcjkEtsonLBJ@BBBD@D@DADCDEDI",
+                            "mode": "driving",
+                            "duration": 8.5,
+                            "maneuver": {
+                                "bearing_after": 174,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 257,
+                                "location": [
+                                    -70.700269,
+                                    -33.480416
+                                ]
+                            },
+                            "weight": 8.5,
+                            "distance": 34.9,
+                            "name": "Retorno Suiza"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`ejkEvsonLBKBMDMDKHSJOTYhBsD\\u@Pi@HKNWLQrEeHz@gBV}@",
+                            "mode": "driving",
+                            "duration": 36,
+                            "maneuver": {
+                                "bearing_after": 106,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 189,
+                                "location": [
+                                    -70.700283,
+                                    -33.480646
+                                ]
+                            },
+                            "weight": 36,
+                            "distance": 523.3,
+                            "name": "Avenida Suiza"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "jvjkEnwnnLFWDQDQDKdAeEnCyJNs@DY@U?[?MAQGc@Ic@SeAKw@EUCSCWAU?W?]?Y@W@WBS@KD]BUF[FUFYHYPe@HSJSJQZk@h@k@xAwAJOpAoAV[RU~DcG|CsEJSJO`A}AjA_B|@aBnDsEfA{AVWPOj@_@RONMLMPQr@cA^k@f@o@d@q@z@mANWPWl@y@t@gAl@w@~@oAZ_@JSt@gBJU",
+                            "mode": "driving",
+                            "duration": 192,
+                            "maneuver": {
+                                "bearing_after": 111,
+                                "type": "new name",
+                                "modifier": "straight",
+                                "bearing_before": 115,
+                                "location": [
+                                    -70.695758,
+                                    -33.483419
+                                ]
+                            },
+                            "weight": 192,
+                            "distance": 2245.9,
+                            "name": "Avenida Departamental"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "rylkEn_knLKCMGOGOGMEg@Sk@U",
+                            "mode": "driving",
+                            "duration": 12.2,
+                            "maneuver": {
+                                "bearing_after": 22,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 120,
+                                "location": [
+                                    -70.676563,
+                                    -33.494177
+                                ]
+                            },
+                            "weight": 12.2,
+                            "distance": 94,
+                            "name": "Avenida Clotario Blest"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "vtlkEb}jnL",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": "left",
+                                "bearing_before": 22,
+                                "location": [
+                                    -70.676178,
+                                    -33.493395
+                                ]
+                            },
+                            "weight": 0,
+                            "distance": 0,
+                            "name": "Avenida Clotario Blest"
+                        }
+                    ],
+                    "distance": 3374.5,
+                    "duration": 297.8,
+                    "summary": "Avenida Suiza, Avenida Departamental",
+                    "weight": 297.8
+                },
+                {
+                    "steps": [
+                        {
+                            "driving_side": "right",
+                            "geometry": "vtlkEb}jnLj@Tf@RLDNF",
+                            "mode": "driving",
+                            "duration": 6.5,
+                            "maneuver": {
+                                "bearing_after": 202,
+                                "type": "depart",
+                                "modifier": "right",
+                                "bearing_before": 0,
+                                "location": [
+                                    -70.676178,
+                                    -33.493395
+                                ]
+                            },
+                            "weight": 6.5,
+                            "distance": 69.4,
+                            "name": "Avenida Clotario Blest"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "hxlkEz~jnLNFLFJBJOvEeHvA_BrAiBHMFI`AaBvByChAyAXc@LOHM`BeCf@q@Va@|@cBZq@^aAv@cCv@iCLa@Ru@^cB^wBH_@FYFYN}@@K^qB`@}Bl@oDRiAN}@XcBF[ZiBxAkIJk@`BiJPeAbA_GHa@",
+                            "mode": "driving",
+                            "duration": 164.3,
+                            "maneuver": {
+                                "bearing_after": 202,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 201,
+                                "location": [
+                                    -70.676461,
+                                    -33.493973
+                                ]
+                            },
+                            "weight": 164.3,
+                            "distance": 2166.4,
+                            "name": "Avenida Departamental"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "~pnkEpbgnLJMX{AfAcDHc@",
+                            "mode": "driving",
+                            "duration": 20.9,
+                            "maneuver": {
+                                "bearing_after": 132,
+                                "type": "turn",
+                                "modifier": "slight right",
+                                "bearing_before": 108,
+                                "location": [
+                                    -70.65657,
+                                    -33.503037
+                                ]
+                            },
+                            "weight": 20.9,
+                            "distance": 158.1,
+                            "name": ""
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "vtnkE~xfnLDYGAc@IGC",
+                            "mode": "driving",
+                            "duration": 16.7,
+                            "maneuver": {
+                                "bearing_after": 106,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 108,
+                                "location": [
+                                    -70.655036,
+                                    -33.503639
+                                ]
+                            },
+                            "weight": 16.7,
+                            "distance": 41.8,
+                            "name": "Gran Avenida José Miguel Carrera"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "hsnkEtwfnLGVK\\Mr@",
+                            "mode": "driving",
+                            "duration": 8.2,
+                            "maneuver": {
+                                "bearing_after": 293,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 14,
+                                "location": [
+                                    -70.654832,
+                                    -33.503411
+                                ]
+                            },
+                            "weight": 8.2,
+                            "distance": 52.5,
+                            "name": ""
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "frnkE~zfnL",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": "right",
+                                "bearing_before": 289,
+                                "location": [
+                                    -70.655358,
+                                    -33.503238
+                                ]
+                            },
+                            "weight": 0,
+                            "distance": 0,
+                            "name": ""
+                        }
+                    ],
+                    "distance": 2488.3,
+                    "duration": 216.6,
+                    "summary": "Avenida Clotario Blest, Avenida Departamental",
+                    "weight": 216.6
+                },
+                {
+                    "steps": [
+                        {
+                            "driving_side": "right",
+                            "geometry": "frnkE~zfnLi@pCI~@",
+                            "mode": "driving",
+                            "duration": 12.3,
+                            "maneuver": {
+                                "bearing_after": 289,
+                                "type": "depart",
+                                "modifier": "right",
+                                "bearing_before": 0,
+                                "location": [
+                                    -70.655358,
+                                    -33.503238
+                                ]
+                            },
+                            "weight": 12.3,
+                            "distance": 101.8,
+                            "name": ""
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "rpnkEpagnLOz@aA|F",
+                            "mode": "driving",
+                            "duration": 13.3,
+                            "maneuver": {
+                                "bearing_after": 286,
+                                "type": "turn",
+                                "modifier": "straight",
+                                "bearing_before": 279,
+                                "location": [
+                                    -70.656408,
+                                    -33.502979
+                                ]
+                            },
+                            "weight": 13.3,
+                            "distance": 152.8,
+                            "name": "Avenida Departamental"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`nnkEjkgnLNFbA_GHa@\\kB|@yD\\qAH[dAkHJq@jAwI@EVmBPsA@GLeA~@uGl@gEFg@h@gDZqBV{BVsBTwBXwBZeCZuBRgBLw@Hi@R}AReA",
+                            "mode": "driving",
+                            "duration": 104.7,
+                            "maneuver": {
+                                "bearing_after": 201,
+                                "type": "continue",
+                                "modifier": "uturn",
+                                "bearing_before": 286,
+                                "location": [
+                                    -70.65798,
+                                    -33.502567
+                                ]
+                            },
+                            "weight": 104.7,
+                            "distance": 1731,
+                            "name": "Avenida Departamental"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "diokEf|cnLDYViAPqAHg@HoA?UBe@",
+                            "mode": "driving",
+                            "duration": 24.8,
+                            "maneuver": {
+                                "bearing_after": 109,
+                                "type": "turn",
+                                "modifier": "slight right",
+                                "bearing_before": 106,
+                                "location": [
+                                    -70.640195,
+                                    -33.506906
+                                ]
+                            },
+                            "weight": 24.8,
+                            "distance": 172.7,
+                            "name": "Acceso a Santa Rosa"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "lkokE|pcnLs@FeHb@qH^yGVoHZ",
+                            "mode": "driving",
+                            "duration": 48.8,
+                            "maneuver": {
+                                "bearing_after": 352,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 95,
+                                "location": [
+                                    -70.638394,
+                                    -33.50727
+                                ]
+                            },
+                            "weight": 48.8,
+                            "distance": 691,
+                            "name": "Avenida Santa Rosa"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "vdnkE|tcnL?\\AZz@C",
+                            "mode": "driving",
+                            "duration": 14.1,
+                            "maneuver": {
+                                "bearing_after": 271,
+                                "type": "continue",
+                                "modifier": "uturn",
+                                "bearing_before": 354,
+                                "location": [
+                                    -70.639033,
+                                    -33.501081
+                                ]
+                            },
+                            "weight": 14.1,
+                            "distance": 59.3,
+                            "name": "Avenida Santa Rosa"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "pfnkErvcnL",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": "right",
+                                "bearing_before": 176,
+                                "location": [
+                                    -70.639295,
+                                    -33.501367
+                                ]
+                            },
+                            "weight": 0,
+                            "distance": 0,
+                            "name": "Avenida Santa Rosa"
+                        }
+                    ],
+                    "distance": 2908.7,
+                    "duration": 218,
+                    "summary": "Avenida Departamental, Avenida Santa Rosa",
+                    "weight": 218
+                },
+                {
+                    "steps": [
+                        {
+                            "driving_side": "right",
+                            "geometry": "pfnkErvcnLlFU",
+                            "mode": "driving",
+                            "duration": 13.1,
+                            "maneuver": {
+                                "bearing_after": 176,
+                                "type": "depart",
+                                "modifier": "right",
+                                "bearing_before": 0,
+                                "location": [
+                                    -70.639295,
+                                    -33.501367
+                                ]
+                            },
+                            "weight": 13.1,
+                            "distance": 133,
+                            "name": "Avenida Santa Rosa"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "~mnkE|ucnLDa@@YEiBA]GmB?OI}BEwBGqBE_BCy@Ae@G}A?UC}@E}AG_B?OEkAAm@Ao@G{AEaBAk@Cq@CgAASKyBQ}FKkDA]AIAYKkBQaCKkBK}AM_BMgBYqECYCUCSG_@Qc@QUSO",
+                            "mode": "driving",
+                            "duration": 156.6,
+                            "maneuver": {
+                                "bearing_after": 97,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 175,
+                                "location": [
+                                    -70.639194,
+                                    -33.50256
+                                ]
+                            },
+                            "weight": 156.6,
+                            "distance": 1619.2,
+                            "name": "San Nicolás"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "lcnkEjj`nLNk@h@kBh@eCF{B@U@uA@q@By@Cu@Im@Ua@Ki@Iq@Au@AgA",
+                            "mode": "driving",
+                            "duration": 48.6,
+                            "maneuver": {
+                                "bearing_after": 112,
+                                "type": "end of road",
+                                "modifier": "right",
+                                "bearing_before": 33,
+                                "location": [
+                                    -70.62198,
+                                    -33.500871
+                                ]
+                            },
+                            "weight": 48.6,
+                            "distance": 471.9,
+                            "name": "Capitán Prat"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "denkExk_nL{@J",
+                            "mode": "driving",
+                            "duration": 4.9,
+                            "maneuver": {
+                                "bearing_after": 350,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 88,
+                                "location": [
+                                    -70.617085,
+                                    -33.501152
+                                ]
+                            },
+                            "weight": 4.9,
+                            "distance": 34,
+                            "name": "San Juan"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "hcnkEdl_nL",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": "right",
+                                "bearing_before": 351,
+                                "location": [
+                                    -70.617145,
+                                    -33.50085
+                                ]
+                            },
+                            "weight": 0,
+                            "distance": 0,
+                            "name": "San Juan"
+                        }
+                    ],
+                    "distance": 2258.2,
+                    "duration": 223.2,
+                    "summary": "San Nicolás, Capitán Prat",
+                    "weight": 223.2
+                },
+                {
+                    "steps": [
+                        {
+                            "driving_side": "right",
+                            "geometry": "hcnkEdl_nLz@K",
+                            "mode": "driving",
+                            "duration": 9.2,
+                            "maneuver": {
+                                "bearing_after": 171,
+                                "type": "depart",
+                                "modifier": "left",
+                                "bearing_before": 0,
+                                "location": [
+                                    -70.617145,
+                                    -33.50085
+                                ]
+                            },
+                            "weight": 9.2,
+                            "distance": 34,
+                            "name": "San Juan"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "denkExk_nLCiH",
+                            "mode": "driving",
+                            "duration": 14.4,
+                            "maneuver": {
+                                "bearing_after": 88,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 170,
+                                "location": [
+                                    -70.617085,
+                                    -33.501152
+                                ]
+                            },
+                            "weight": 14.4,
+                            "distance": 137.6,
+                            "name": "Capitán Prat"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`enkEnb_nL?U?[?Q_@D{BV{@B{@FqFx@E@WBsCb@_Hz@_@DyKhB_Ej@aBFk@Fs@H}AROB{FhAwC\\sAPkGdAgB^g@J]Hk@JOFs@Xk@Tu@ZUNaAt@URc@`@m@n@KJi@d@{@h@{@ZcB`@kJ|A}LvBa@H{AV}AXUBqSlD",
+                            "mode": "driving",
+                            "duration": 187.3,
+                            "maneuver": {
+                                "bearing_after": 90,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 88,
+                                "location": [
+                                    -70.615602,
+                                    -33.501129
+                                ]
+                            },
+                            "weight": 187.3,
+                            "distance": 3050.9,
+                            "name": "Avenida Vicuña Mackenna Oriente"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "jaikEbp`nLMqHOqHCkAAe@EwBKiFEwBEqBG{C",
+                            "mode": "driving",
+                            "duration": 44.7,
+                            "maneuver": {
+                                "bearing_after": 85,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 347,
+                                "location": [
+                                    -70.622901,
+                                    -33.474944
+                                ]
+                            },
+                            "weight": 44.7,
+                            "distance": 683.7,
+                            "name": "Rodrigo de Araya"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`_ikEdb_nLNmBDe@Bo@@g@",
+                            "mode": "driving",
+                            "duration": 15.8,
+                            "maneuver": {
+                                "bearing_after": 99,
+                                "type": "continue",
+                                "modifier": "slight right",
+                                "bearing_before": 85,
+                                "location": [
+                                    -70.615546,
+                                    -33.474569
+                                ]
+                            },
+                            "weight": 15.8,
+                            "distance": 110.2,
+                            "name": "Rodrigo de Araya"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "|_ikExz~mL",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": "right",
+                                "bearing_before": 95,
+                                "location": [
+                                    -70.614372,
+                                    -33.474714
+                                ]
+                            },
+                            "weight": 0,
+                            "distance": 0,
+                            "name": "Rodrigo de Araya"
+                        }
+                    ],
+                    "distance": 4016.3,
+                    "duration": 271.4,
+                    "summary": "Avenida Vicuña Mackenna Oriente, Rodrigo de Araya",
+                    "weight": 271.4
+                },
+                {
+                    "steps": [
+                        {
+                            "driving_side": "right",
+                            "geometry": "|_ikExz~mLCoBCoA",
+                            "mode": "driving",
+                            "duration": 18.3,
+                            "maneuver": {
+                                "bearing_after": 88,
+                                "type": "depart",
+                                "modifier": "right",
+                                "bearing_before": 0,
+                                "location": [
+                                    -70.614372,
+                                    -33.474714
+                                ]
+                            },
+                            "weight": 18.3,
+                            "distance": 89.2,
+                            "name": "Rodrigo de Araya"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "t_ikExt~mLk@BgFJgBBqAB[?UAgAAi@CsBH_@DSD",
+                            "mode": "driving",
+                            "duration": 37.2,
+                            "maneuver": {
+                                "bearing_after": 355,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 85,
+                                "location": [
+                                    -70.613412,
+                                    -33.474674
+                                ]
+                            },
+                            "weight": 37.2,
+                            "distance": 442.9,
+                            "name": "Avenida Marathon"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "zfhkE~u~mLUJDtAB`ABjADnABtADxADhBDnBDpABpABnADvAFdCBjA@`@Bp@BpADnA@rA@\\?p@Cp@Ad@BZ@NHn@HVR`@PXJPTZ",
+                            "mode": "driving",
+                            "duration": 74.5,
+                            "maneuver": {
+                                "bearing_after": 334,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 347,
+                                "location": [
+                                    -70.613596,
+                                    -33.470701
+                                ]
+                            },
+                            "weight": 74.5,
+                            "distance": 943.8,
+                            "name": "Guillermo Mann"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "~khkEvs`nL@F@F?H?HCHIJKDmBDU@SDQD]Jo@\\[TMNQRS\\uB|DSVORURYNWJYHmEx@I@WFE@iAT_IxA_BZ",
+                            "mode": "driving",
+                            "duration": 59.9,
+                            "maneuver": {
+                                "bearing_after": 275,
+                                "type": "turn",
+                                "modifier": "sharp right",
+                                "bearing_before": 227,
+                                "location": [
+                                    -70.623484,
+                                    -33.471521
+                                ]
+                            },
+                            "weight": 59.9,
+                            "distance": 861.2,
+                            "name": "Avenida Vicuña Mackenna Oriente"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "dbgkEbjanL@NBNt@pG",
+                            "mode": "driving",
+                            "duration": 17.2,
+                            "maneuver": {
+                                "bearing_after": 255,
+                                "type": "turn",
+                                "modifier": "left",
+                                "bearing_before": 345,
+                                "location": [
+                                    -70.62706,
+                                    -33.464827
+                                ]
+                            },
+                            "weight": 17.2,
+                            "distance": 146.3,
+                            "name": "Maule"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "`dgkEtsanLiAT",
+                            "mode": "driving",
+                            "duration": 3.8,
+                            "maneuver": {
+                                "bearing_after": 345,
+                                "type": "turn",
+                                "modifier": "right",
+                                "bearing_before": 255,
+                                "location": [
+                                    -70.628593,
+                                    -33.465134
+                                ]
+                            },
+                            "weight": 3.8,
+                            "distance": 43.1,
+                            "name": "Santa Elena"
+                        },
+                        {
+                            "driving_side": "right",
+                            "geometry": "vagkEjtanL",
+                            "mode": "driving",
+                            "duration": 0,
+                            "maneuver": {
+                                "bearing_after": 0,
+                                "type": "arrive",
+                                "modifier": "left",
+                                "bearing_before": 347,
+                                "location": [
+                                    -70.628696,
+                                    -33.464756
+                                ]
+                            },
+                            "weight": 0,
+                            "distance": 0,
+                            "name": "Santa Elena"
+                        }
+                    ],
+                    "distance": 2526.4,
+                    "duration": 210.9,
+                    "summary": "Guillermo Mann, Avenida Vicuña Mackenna Oriente",
+                    "weight": 210.9
+                }
+            ],
+            "distance": 43150.2,
+            "duration": 3095.5,
+            "weight_name": "routability",
+            "weight": 3095.5
+        }
+    ],
+    "waypoints": [
+        {
+            "waypoint_index": 0,
+            "location": [
+                -70.594626,
+                -33.431717
+            ],
+            "name": "La Brabanzon",
+            "hint": "5okHgP___38EAAAACgAAACgAAAAFAAAAxkypQP9yqkCuSTNCZ8fgQQQAAAAKAAAAKAAAAAUAAADoAQAAvs_K-1vfAf5k0Mr7yN0B_gIAvw8KtoH9",
+            "trips_index": 0
+        },
+        {
+            "waypoint_index": 5,
+            "location": [
+                -70.639295,
+                -33.501367
+            ],
+            "name": "Avenida Santa Rosa",
+            "hint": "aM8AgP___38SAAAAXAAAAAAAAAAAAAAAlVECQgWmBEMAAAAAAAAAABIAAABcAAAAAAAAAAAAAADoAQAAQSHK-0nPAP5qIMr7PM8A_gAA_woKtoH9",
+            "trips_index": 0
+        },
+        {
+            "waypoint_index": 7,
+            "location": [
+                -70.614372,
+                -33.474714
+            ],
+            "name": "Rodrigo de Araya",
+            "hint": "D6YHgP___38aAAAAGwAAAIQAAABLAAAATHaRQfHFDj-zX7hC_y5PQhoAAAAbAAAAhAAAAEsAAADoAQAAnILK-2Y3Af6Ugsr7EDcB_gMA7wUKtoH9",
+            "trips_index": 0
+        },
+        {
+            "waypoint_index": 4,
+            "location": [
+                -70.655358,
+                -33.503238
+            ],
+            "name": "",
+            "hint": "G8wHgP___38eAAAAdQAAABIAAAAkAAAAbA_OQXczj0K-Lm1Bvi5tQR4AAAB1AAAAEgAAACQAAADoAQAAguLJ-_rHAP684sn7hMgA_gEAHxIKtoH9",
+            "trips_index": 0
+        },
+        {
+            "waypoint_index": 3,
+            "location": [
+                -70.676178,
+                -33.493395
+            ],
+            "name": "Avenida Clotario Blest",
+            "hint": "JroHgLO6B4ANAAAAEgAAAAAAAAAAAAAA5dmpQSPS1UEAAAAAAAAAAA0AAAASAAAAAAAAAAAAAADoAQAALpHJ-23uAP7mkMn7hu4A_gAArwwKtoH9",
+            "trips_index": 0
+        },
+        {
+            "waypoint_index": 6,
+            "location": [
+                -70.617145,
+                -33.50085
+            ],
+            "name": "San Juan",
+            "hint": "6BUAgB-TB4AxAAAAMwAAAAAAAAAAAAAAhdIHQoDSC0IAAAAAAAAAADEAAAAzAAAAAAAAAAAAAADoAQAAx3fK-07RAP7ueMr7dtEA_gAA7xUKtoH9",
+            "trips_index": 0
+        },
+        {
+            "waypoint_index": 2,
+            "location": [
+                -70.69636,
+                -33.482945
+            ],
+            "name": "Avenida Suiza",
+            "hint": "Q3MBgP___38IAAAADAAAACIAAABGAAAAkGBoQTVXyUB4InpCFuyvQQgAAAAMAAAAIgAAAEYAAADoAQAAWELJ-z8XAf52Qsn7WBcB_gMAvxMKtoH9",
+            "trips_index": 0
+        },
+        {
+            "waypoint_index": 1,
+            "location": [
+                -70.658699,
+                -33.386991
+            ],
+            "name": "Cacique Ainavilo",
+            "hint": "QKwUgEWsFIBhAAAAPgAAAAAAAAAAAAAASu-GQv_ZK0IAAAAAAAAAAGEAAAA-AAAAAAAAAAAAAADoAQAAddXJ-xGOAv5-1cn7ho0C_gAAbwUKtoH9",
+            "trips_index": 0
+        },
+        {
+            "waypoint_index": 8,
+            "location": [
+                -70.628696,
+                -33.464756
+            ],
+            "name": "Santa Elena",
+            "hint": "iGwHgP___38mAAAAZQAAAAAAAAAAAAAANgMsQrjgiUIAAAAAAAAAACYAAABlAAAAAAAAAAAAAADoAQAAqErK-0xeAf4sSsr7NF4B_gAAvxUKtoH9",
+            "trips_index": 0
+        }
+    ]
+}

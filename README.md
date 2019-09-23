@@ -70,8 +70,8 @@ Before list the params, We'll define a point like: An array with 2 numbers, the 
   Each waypoint (origin and destination), has the following parameters:
     - `latitude`: The same latitude you send in the parameters.
     - `longitude`: The same longitude you send in the parameters.
-    - `original_order`: Order of the input, starting in `0` (`0` is always the `origin`).
-    - `current_order`: Resulting order. This value is equal `original_order`, unless you use the `optimize` option.
+    - `current_order`: Order of the input, starting in `0` (`0` is always the `origin`).
+    - `original_order`: Resulting order. This value is equal `current_order`, unless you use the `optimize` option.
 - `status`: The calculated status based on the historical list of statuses. 3 values:
   - `OK` (all the request were `Ok`s).
   - `Approached` (more than 75% of the requests were `Ok`s).

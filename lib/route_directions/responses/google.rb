@@ -71,9 +71,7 @@ module RouteDirections
 
         return waypoint_order_by_index(index) if index.zero?
 
-        new_index = waypoints_json.index do |i|
-          index == i + 1
-        end
+        new_index = waypoints_json[index - 1]
 
         return waypoint_order_by_index(index) if new_index.nil?
 

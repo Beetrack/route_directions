@@ -1,0 +1,169 @@
+{
+    "geocoded_waypoints": [],
+    "routes": [
+        {
+            "legs": [
+                {
+                    "distance": {
+                        "text": "11.0 km",
+                        "value": 10995
+                    },
+                    "duration": {
+                        "text": "20 mins",
+                        "value": 1184
+                    },
+                    "end_address": "Cacique Andalican 1223, Conchalí, Región Metropolitana, Chile",
+                    "end_location": {
+                        "lat": -33.386995,
+                        "lng": -70.6586958
+                    },
+                    "start_address": "Augusto Ovalle Castillo 1330, Providencia, Región Metropolitana, Chile",
+                    "start_location": {
+                        "lat": -33.4317586,
+                        "lng": -70.59473919999999
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "1.4 km",
+                                "value": 1360
+                            },
+                            "duration": {
+                                "text": "4 mins",
+                                "value": 254
+                            },
+                            "polyline": {
+                                "points": "ns`kEb`{mLGB_Dt@MBaDp@MDMD_Cz@OBMD}Bn@UDeDr@iD~@KD_Dz@c@Pa@HcDx@sD|@MBsDbAaEjAsCbA_AXy@XkAV"
+                            },
+                            "start_location": {
+                                "lat": -33.4317586,
+                                "lng": -70.59473919999999
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "19.9 km",
+                        "value": 19915
+                    },
+                    "duration": {
+                        "text": "19 mins",
+                        "value": 1156
+                    },
+                    "end_location": {
+                        "lat": -33.4829434,
+                        "lng": -70.6963523
+                    },
+                    "start_location": {
+                        "lat": -33.386995,
+                        "lng": -70.6586958
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "39 m",
+                                "value": 39
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 4
+                            },
+                            "polyline": {
+                                "points": "v{wjEzognLCsA"
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "3.4 km",
+                        "value": 3372
+                    },
+                    "duration": {
+                        "text": "7 mins",
+                        "value": 448
+                    },
+                    "end_location": {
+                        "lat": -33.4934027,
+                        "lng": -70.6761564
+                    },
+                    "start_location": {
+                        "lat": -33.4829434,
+                        "lng": -70.6963523
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "0.2 km",
+                                "value": 226
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 23
+                            },
+                            "polyline": {
+                                "points": "jsjkEd{nnLINsClEs@bAs@pA"
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                },
+                {
+                    "distance": {
+                        "text": "3.1 km",
+                        "value": 3082
+                    },
+                    "duration": {
+                        "text": "9 mins",
+                        "value": 527
+                    },
+                    "end_location": {
+                        "lat": -33.5031914,
+                        "lng": -70.65534699999999
+                    },
+                    "start_location": {
+                        "lat": -33.4934027,
+                        "lng": -70.6761564
+                    },
+                    "steps": [
+                        {
+                            "distance": {
+                                "text": "0.3 km",
+                                "value": 328
+                            },
+                            "duration": {
+                                "text": "1 min",
+                                "value": 42
+                            },
+                            "polyline": {
+                                "points": "vtlkE~|jnLi@UYEk@QoDyA{F_CCA"
+                            },
+                            "travel_mode": "DRIVING"
+                        }
+                    ],
+                    "traffic_speed_entry": [],
+                    "via_waypoint": []
+                }
+            ],
+            "overview_polyline": {
+                "points": "ns`kEb`{mLwInBkDjAaUbGgKdCiQlFeCp@_BbCeElGeDhB}@xCq@zEOhCoCrIoAbDChFBr@Vt@PrAkAfJmAtI]~@_AxAcA~@u@d@mBlBsDpBqFtAqADaGUmEkAwHaDoH}CuHgB{FKc@BcFx@}DrAmC|AwCrCkFzFwDtEu@zB_AvH_@nBa@|A_DfIoHzRg@pAoDjIsIxNoMrR{P|WkOxTaHnMsDzIgGbT_GbTmC|HiIrZxBbAvBRlDpAp@HvLUlKWzKm@zJc@~CP^FD`E}BFBrACsAy@BBc@FmC@Y?[[?iAD_DJoNz@kHP}P^q@AmBk@yAm@u@{@kAaAoAi@_CjIcE~Ok@nCoBnIsEtO{EjQaOpj@qM`f@cAtIk@dNw@rUa@zNG`LIvBUfBFzG@vGVrCP`Ct@`FCjA]`@q@Ds@q@AkAXa@ZUdBu@bLqDdXuJn[sLpJeDrEyAf@LzBb@tBrAfBzA|IpEf^hNx]`NzCXbAK~CqAvYmO~DkB`J_DbZ}KtQ{FlE}ArEqAzJiAhIq@vIyAjLqCtDc@hEVdKlAbNlAbNlAnDh@xFRvHJdMVdPW~GUrEeAtBY|WdA`P\\jMd@bDMnDg@`LoCfYqHlZyGvFi@dEO|UNjJI|GCnAPhDNlF@dB[`DsA`CeAlBLv@Z`BjChC|DnAjBlCxCtXbVbEnDnApAW~@Q^g@|@iGlJs@j@_EdG?\\HbARHRA^iAlCsEz@yBjGsJl@{Ad@kBrEaP`@_D]yC_@{BGsBNmC|@_DhBoCjEkEjMwRjCcEpD_FzEmEpFkH~F{In@uAPe@OEOGuBy@_HgC_GaCzAcFfCaJfBiHhEgOl@wBjAXv@AvBu@bAeAfBuGlEwRpOis@zO|CzFbAQp@WbAq@fE?`@uCaAX}A\\}B\\iBDa@q@K}Cm@aFeAuEy@cJcBmFcAeB[`AwF|AyIrCgPhFyZzCeQtIg@dH_@bH_@BTAf@EbAqAvKo@jEiHuAbBqLh@}FCsDUiIw@kXcAk^?WsEl@{ANyKtAiJjAi@_AFkIXyUP{Uy@wMpWkDnBYHj@Dh@JPB|AGj@BiCKQEi@Ik@h@An@?CkAQByMtAc@FyJ~A_D^yOhCaDj@eCHuDn@qUnDaCn@u@SYa@EsAKeBsAoFuv@vIqBj@}B`A}@JmADK}EE_CEmB@gGL_CCcEcDVyEDHhAl@vNLdFb@hYDtHaIjA{@PqDTwA|@}ChFkA|AeDr@uNnC_C`@Mh@t@jGgAT"
+            },
+            "warnings": [],
+            "waypoint_order": [
+                0,
+                1,
+                2
+            ]
+        }
+    ],
+    "status": "OK"
+}
