@@ -2,7 +2,7 @@ require 'singleton'
 require 'ostruct'
 
 module RouteDirections
-  AVAILABLE_PROVIDERS = %w[Google Osrm].freeze
+  AVAILABLE_PROVIDERS = %w[Google Here Osrm].freeze
   OPTION_KEYS = %w[key host headers max_waypoint_size max_tries].freeze
 
   def self.configure(options)

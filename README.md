@@ -1,5 +1,5 @@
 # Route directions
-Defines a common interface to works over different route calculation providers (Google and OSRM).
+Defines a common interface to works over different route calculation providers (Google, Here and OSRM).
 
 ## Quick Start
 
@@ -41,7 +41,7 @@ Before list the params, We'll define a point like: An array with 2 numbers, the 
 - `origin`: The departure point.
 - `destinations`: The arrival point.
 - `options`: **[optional]** A hash with the next possible values:
-  - `provider`: `Google` or `Osrm` valid options for the moment. **default 'Google'**
+  - `provider`: `Google`, `Here` or `Osrm` valid options for the moment. **default 'Google'**
   - `waypoints`: An array of points (in the required order).
   - `max_waypoint_size`: The max number of intermediate waypoints (without counting origin and destination) in each request. If the number of `waypoints` is greater than this number, the original route is splited in several requests of size `max_waypoint_size`, and then the results are merged. **default `23`**
   - `max_tries`: The number of tries for each request. `0` or `1` implies only 1 request. **default `3`**
@@ -51,6 +51,10 @@ Before list the params, We'll define a point like: An array with 2 numbers, the 
 ### Google
   - `options`:
     - `key`: **[required]** The auth values for google. It must be an array with the folowing values: `[<private key>, <client ID>, <channel]>`. For more information please visit the following [link](https://developers.google.com/maps/premium/previous-licenses/webservices/auth).
+    - `departure_time`: **[optional]** An `Integer`. It specifies the departure time in seconds (*since midnight, January 1, 1970 UTC*).
+### Here
+  - `options`:
+    - `key`: **[required]** The auth values for Here Rest API. It must be an array with the following values: `[<APP ID>, <APP CODE>]`. For more information please visit the following [link](https://developer.here.com/develop/rest-apis).
     - `departure_time`: **[optional]** An `Integer`. It specifies the departure time in seconds (*since midnight, January 1, 1970 UTC*).
 ### OSRM
   - `options`:

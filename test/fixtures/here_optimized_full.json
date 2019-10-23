@@ -1,0 +1,169 @@
+{
+    "results": [
+        {
+            "waypoints": [
+                {
+                    "id": "start",
+                    "lat": -33.43212,
+                    "lng": -70.59446,
+                    "sequence": 0,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": "2019-10-22T19:06:40-03:00",
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination7",
+                    "lat": -33.38713,
+                    "lng": -70.65869,
+                    "sequence": 1,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": "2019-10-22T19:31:42-03:00",
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination6",
+                    "lat": -33.48292,
+                    "lng": -70.69633,
+                    "sequence": 2,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": "2019-10-22T20:01:12-03:00",
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination4",
+                    "lat": -33.49337,
+                    "lng": -70.67625,
+                    "sequence": 3,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": "2019-10-22T20:10:06-03:00",
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination3",
+                    "lat": -33.5031,
+                    "lng": -70.6553,
+                    "sequence": 4,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": "2019-10-22T20:18:02-03:00",
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination1",
+                    "lat": -33.50138,
+                    "lng": -70.63951,
+                    "sequence": 5,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": "2019-10-22T20:25:23-03:00",
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination5",
+                    "lat": -33.50081,
+                    "lng": -70.61685,
+                    "sequence": 6,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": "2019-10-22T20:35:27-03:00",
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination2",
+                    "lat": -33.4748,
+                    "lng": -70.61438,
+                    "sequence": 7,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": "2019-10-22T20:45:29-03:00",
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "end",
+                    "lat": -33.46478,
+                    "lng": -70.62882,
+                    "sequence": 8,
+                    "estimatedArrival": "2019-10-22T20:53:11-03:00",
+                    "estimatedDeparture": null,
+                    "fulfilledConstraints": []
+                }
+            ],
+            "distance": "44087",
+            "time": "6391",
+            "interconnections": [
+                {
+                    "fromWaypoint": "start",
+                    "toWaypoint": "destination7",
+                    "distance": 11430,
+                    "time": 1502,
+                    "rest": 0,
+                    "waiting": 0
+                },
+                {
+                    "fromWaypoint": "destination7",
+                    "toWaypoint": "destination6",
+                    "distance": 14938,
+                    "time": 1770,
+                    "rest": 0,
+                    "waiting": 0
+                },
+                {
+                    "fromWaypoint": "destination6",
+                    "toWaypoint": "destination4",
+                    "distance": 3377,
+                    "time": 534,
+                    "rest": 0,
+                    "waiting": 0
+                },
+                {
+                    "fromWaypoint": "destination4",
+                    "toWaypoint": "destination3",
+                    "distance": 2603,
+                    "time": 476,
+                    "rest": 0,
+                    "waiting": 0
+                },
+                {
+                    "fromWaypoint": "destination3",
+                    "toWaypoint": "destination1",
+                    "distance": 2617,
+                    "time": 441,
+                    "rest": 0,
+                    "waiting": 0
+                },
+                {
+                    "fromWaypoint": "destination1",
+                    "toWaypoint": "destination5",
+                    "distance": 2999,
+                    "time": 604,
+                    "rest": 0,
+                    "waiting": 0
+                },
+                {
+                    "fromWaypoint": "destination5",
+                    "toWaypoint": "destination2",
+                    "distance": 3675,
+                    "time": 602,
+                    "rest": 0,
+                    "waiting": 0
+                },
+                {
+                    "fromWaypoint": "destination2",
+                    "toWaypoint": "end",
+                    "distance": 2448,
+                    "time": 462,
+                    "rest": 0,
+                    "waiting": 0
+                }
+            ],
+            "description": "Targeted best time; with , improvement for traffic",
+            "timeBreakdown": {
+                "driving": 6391,
+                "service": 0,
+                "rest": 0,
+                "waiting": 0
+            }
+        }
+    ],
+    "errors": [],
+    "processingTimeDesc": "3164ms",
+    "responseCode": "200",
+    "warnings": null,
+    "requestId": null
+}

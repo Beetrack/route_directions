@@ -51,6 +51,10 @@ module RouteDirections
         raise NotImplementedError, 'Called abstract method process_status_code'
       end
 
+      def waypoint_new_order_by_index
+        raise NotImplementedError, 'Called abstract method waypoint_new_order_by_index'
+      end
+
       def process_error(error)
         @time += DEFAULT_TIME
         @distance += DEFAULT_DISTANCE
