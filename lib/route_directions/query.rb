@@ -1,6 +1,7 @@
 require 'route_directions/configuration'
-require 'route_directions/clients/google'
-require 'route_directions/clients/osrm'
+%w[google osrm here].each do |client|
+  require "route_directions/clients/#{client}"
+end
 require 'date'
 
 module RouteDirections
