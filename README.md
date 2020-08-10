@@ -54,7 +54,7 @@ Before list the params, We'll define a point like: An array with 2 numbers, the 
     - `departure_time`: **[optional]** An `Integer`. It specifies the departure time in seconds (*since midnight, January 1, 1970 UTC*).
 ### Here
   - `options`:
-    - `key`: **[required]** The auth values for Here Rest API. It must be an array with the following values: `[<APP ID>, <APP CODE>]`. For more information please visit the following [link](https://developer.here.com/develop/rest-apis).
+    - `key`: **[required]** The auth value for Here Rest API. It must be the `API_KEY`. For more information please visit the following [link](https://developer.here.com/develop/rest-apis).
     - `departure_time`: **[optional]** An `Integer`. It specifies the departure time in seconds (*since midnight, January 1, 1970 UTC*).
 ### OSRM
   - `options`:

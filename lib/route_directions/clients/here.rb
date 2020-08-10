@@ -28,9 +28,9 @@ module RouteDirections
 
       def provider_url
         if options[:optimize]
-          'https://wse.api.here.com/2/findsequence.json'
+          'https://wse.ls.hereapi.com/2/findsequence.json'
         else
-          'https://route.api.here.com/routing/7.2/calculateroute.json'
+          'https://route.ls.hereapi.com/routing/7.2/calculateroute.json'
         end
       end
 
@@ -48,8 +48,7 @@ module RouteDirections
 
       def auth_params
         {
-          app_id: app_id,
-          app_code: app_code
+          apiKey: api_key
         }
       end
 
@@ -115,15 +114,7 @@ module RouteDirections
           Configuration.instance.here_options.max_tries
       end
 
-      def app_id
-        key[0]
-      end
-
-      def app_code
-        key[1]
-      end
-
-      def key
+      def api_key
         options[:key] || Configuration.instance.here_options.key
       end
 

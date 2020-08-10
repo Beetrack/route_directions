@@ -27,7 +27,7 @@ module Here
     def setup
       RouteDirections.configure(
         max_waypoint_size: 7,
-        key: ['some app id', 'some app code'],
+        key: 'some api key',
         provider: 'Here'
       )
 
@@ -54,7 +54,7 @@ module Here
     def setup
       RouteDirections.configure(
         max_waypoint_size: 7,
-        key: ['some app id', 'some app code'],
+        key: 'some api key',
         provider: 'Here'
       )
 
@@ -92,7 +92,7 @@ module Here
     def setup
       RouteDirections.configure(
         max_waypoint_size: 3,
-        key: ['some app id', 'some app code'],
+        key: 'some api key',
         provider: 'Here'
       )
 
@@ -127,7 +127,7 @@ module Here
     def setup
       RouteDirections.configure(
         max_waypoint_size: 3,
-        key: ['some app id', 'some app code'],
+        key: 'some api key',
         provider: 'Here'
       )
 
