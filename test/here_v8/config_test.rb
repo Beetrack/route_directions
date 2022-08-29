@@ -1,18 +1,13 @@
 require 'test_helper'
-require 'route_directions/clients/here'
+require 'route_directions/clients/here_v8'
 
-module Here
+module HereV8
   class ConfigTest < Minitest::Test
     def setup
-      RouteDirections.configure(key: 'some api key',
-                                provider: 'HereV8')
+      RouteDirections.configure(key: 'some api key', provider: 'HereV8')
       @origin = [38.920554, -77.029094]
       @destination = [38.851339, -77.137241]
-      @options = {
-        waypoints: [
-          [38.891494, -77.074785]
-        ]
-      }
+      @options = { waypoints: [[38.891494, -77.074785]]}
       @here = RouteDirections::Clients::HereV8.new(@origin, @destination, @options)
     end
 
@@ -26,7 +21,7 @@ module Here
           origin: '38.920554,-77.029094',
           destination: '38.851339,-77.137241'
         }
-      ), @here.send(:parameters, @origin, @destination).slice(:origin, :destination)
+      ), @here.send(:parameters, @origin, @options[:waypoints], @destination).slice(:origin, :destination)
     end
   end
 end

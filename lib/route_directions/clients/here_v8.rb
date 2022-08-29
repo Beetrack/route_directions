@@ -17,10 +17,11 @@ module RouteDirections
 
       private
 
-      def request(origin, _waypoints, destination)
+      def request(origin, waypoints, destination)
+        @waypoints = waypoints
         Request.new(
           provider_url,
-          parameters(origin, destination),
+          parameters(origin, waypoints, destination),
           nil,
           max_tries
         )
@@ -35,12 +36,12 @@ module RouteDirections
       end
 
       def vias_parameter
-        return '' if waypoints.empty?
+        return '' if @waypoints.nil? || @waypoints.empty?
 
-        '?' + waypoints.map { |point| "via=#{waypoint_parser(*point)}" }.join('&')
+        '?' + @waypoints.map { |point| "via=#{waypoint_parser(*point)}" }.join('&')
       end
 
-      def parameters(origin, destination)
+      def parameters(origin, waypoints, destination)
         params = {
           transportMode: 'car',
           routingMode: 'fast'
@@ -49,7 +50,7 @@ module RouteDirections
         params.merge!(spans: 'length')
         params.merge!(return: 'summary,polyline')
         params.merge!(auth_params)
-        params.merge!(waypoints_params(origin, destination))
+        params.merge!(waypoints_params(origin, waypoints, destination))
         params.merge!(departure_time_params)
         params
       end
@@ -60,11 +61,24 @@ module RouteDirections
         }
       end
 
-      def waypoints_params(origin, destination)
-        {
-          'origin': waypoint_parser(*origin),
-          'destination': waypoint_parser(*destination)
-        }
+      def waypoints_params(origin, waypoints, destination)
+        params = {}
+
+        if options[:optimize]
+          params[waypoint_name_param(0, waypoints)] = waypoint_parser(*origin)
+          params[waypoint_name_param(waypoints.size + 1, waypoints)] = waypoint_parser(*destination)
+
+          return params unless waypoints.any?
+
+          waypoints.each_with_index do |point, i|
+            params[waypoint_name_param(i + 1, waypoints)] = waypoint_parser(*point)
+          end
+        else
+          params[:origin] = waypoint_parser(*origin)
+          params[:destination] = waypoint_parser(*destination)
+        end
+
+        params
       end
 
       def departure_time_params
@@ -105,17 +119,13 @@ module RouteDirections
       end
 
       def waypoint_name_param(index, waypoints)
-        if options[:optimize]
-          case index
-          when 0
-            :start
-          when waypoints.size + 1
-            :end
-          else
-            "destination#{index}".to_sym
-          end
+        case index
+        when 0
+          :start
+        when waypoints.size + 1
+          :end
         else
-          "waypoint#{index}".to_sym
+          "destination#{index}".to_sym
         end
       end
     end
