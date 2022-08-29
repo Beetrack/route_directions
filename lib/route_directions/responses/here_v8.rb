@@ -41,7 +41,7 @@ module RouteDirections
         @distance += route_body['sections'].sum { |section| section['summary']['length'] }
         route_body['sections'].each_with_index do |leg_json, index|
           @route_legs << process_legs(leg_json, index)
-          @polyline << leg_json['polyline']
+          @polyline << decode_polyline(leg_json['polyline'])
         end
         @statuses += ['OK']
       end
@@ -50,7 +50,7 @@ module RouteDirections
         leg = RouteLeg.new(
           leg_json['summary']['length'],
           leg_json['summary']['duration'],
-          leg_json['polyline']
+          decode_polyline(leg_json['polyline'])
         )
         add_waypoints_to_route_leg(leg, index, nil)
       end

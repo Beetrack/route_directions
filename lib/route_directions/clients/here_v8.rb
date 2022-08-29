@@ -36,7 +36,7 @@ module RouteDirections
       end
 
       def vias_parameter
-        return '' if @waypoints.nil? || @waypoints.empty?
+        return '' if waypoints.nil? || waypoints.empty?
 
         '?' + @waypoints.map { |point| "via=#{waypoint_parser(*point)}" }.join('&')
       end
