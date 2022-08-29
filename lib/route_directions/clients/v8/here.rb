@@ -18,10 +18,10 @@ module RouteDirections
 
         private
 
-        def request(origin, waypoints, destination)
+        def request(origin, _waypoints, destination)
           Request.new(
             provider_url,
-            parameters(origin, waypoints, destination),
+            parameters(origin, destination),
             nil,
             max_tries
           )
@@ -41,17 +41,15 @@ module RouteDirections
           waypoints.map { |point| "via=#{waypoint_parser(*point)}" }.join('&')
         end
 
-        def parameters(origin, waypoints, destination)
+        def parameters(origin, destination)
           params = {
             transportMode: 'car',
             routingMode: 'fast'
           }
 
           params.merge!(spans: 'length')
-
           params.merge!(auth_params)
-          params.merge!(waypoints_params(origin, waypoints, destination))
-          params.merge!(response_format_params)
+          params.merge!(waypoints_params(origin, destination))
           params.merge!(departure_time_params)
           params
         end
@@ -62,20 +60,11 @@ module RouteDirections
           }
         end
 
-        def waypoints_params(origin, waypoints, destination)
-          params = {}
-          params['origin'] = waypoint_parser(*origin)
-          params['destination'] = waypoint_parser(*destination)
-          params
-        end
-
-        def response_format_params
-          if options[:optimize]
-            {}
-          else
-            {
-            }
-          end
+        def waypoints_params(origin, destination)
+          {
+            'origin': waypoint_parser(*origin),
+            'destination': waypoint_parser(*destination)
+          }
         end
 
         def departure_time_params
