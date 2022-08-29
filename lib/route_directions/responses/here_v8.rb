@@ -10,6 +10,8 @@ module RouteDirections
 
       def process_response
         body = JSON.parse(@http_response.body)
+        puts "process response -> "
+        binding.pry
         process_valid(body['routes'][0])
       end
 
@@ -27,7 +29,7 @@ module RouteDirections
         leg = RouteLeg.new(
           leg_json['summary']['length'],
           leg_json['summary']['duration'],
-          leg_json['polyline']
+          decode_polyline(leg_json['polyline'])
         )
         add_waypoints_to_route_leg(leg, index, nil)
       end
