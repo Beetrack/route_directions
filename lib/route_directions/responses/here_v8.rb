@@ -18,6 +18,7 @@ module RouteDirections
         @distance += route_body['sections'].sum { |section| section['summary']['length'] }
         route_body['sections'].each_with_index do |leg_json, index|
           @route_legs << process_legs(leg_json, index)
+          @polyline << leg_json['polyline']
         end
         @statuses += ['OK']
       end
