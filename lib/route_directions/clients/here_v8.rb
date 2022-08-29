@@ -47,6 +47,7 @@ module RouteDirections
         }
 
         params.merge!(spans: 'length')
+        params.merge!(return: 'summary,polyline')
         params.merge!(auth_params)
         params.merge!(waypoints_params(origin, destination))
         params.merge!(departure_time_params)
