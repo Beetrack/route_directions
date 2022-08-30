@@ -11,7 +11,7 @@ module RouteDirections
 
       def max_waypoints
         options[:max_waypoint_size] ||
-          Configuration.instance.here_options.max_waypoint_size ||
+          Configuration.instance.herev8_options.max_waypoint_size ||
           MAX_WAYPOINTS
       end
 
@@ -105,11 +105,11 @@ module RouteDirections
 
       def max_tries
         options[:max_retries] ||
-          Configuration.instance.here_options.max_tries
+          Configuration.instance.herev8_options.max_tries
       end
 
       def api_key
-        options[:key] || Configuration.instance.here_options.key
+        options[:key] || Configuration.instance.herev8_options.key
       end
 
       def waypoint_name_param(index, waypoints)

@@ -36,8 +36,8 @@
                       }
                   },
                   "summary": {
-                      "duration": 5637,
-                      "length": 49993,
+                      "duration": 4937,
+                      "length": 34793,
                       "baseDuration": 1325
                   },
                   "polyline": "BG3mw4_Bvz30mE3D_OvCzKkS7G8QnGgU7GoVstDjwBkXr2BwW3I_iB_J3mB7VvyCrTzrCzUzwC7Q3_BrO74BnQj_B3NnzB_JvHvvBwMzU0FrEoBrsB0KjI8BzFoBrO4DzUz6CnVr-CvRjpCvM_7B3IvqB_JvvBvC3SAjDnB_TT3kCAzZ8BvRwCvHwCvMUjNA7LnBrJrE7VvCrJ_E7VzKvqBjDjN3NjuC7Lj6BnLr2BjD_YrEn9BjInzBvC7QjDrTrO3zCrE_E_J3wBnGrnB3DnQvR_qCrT72CrE_T_E7L3N7V3NrT_EzK_E_O_JnzB7L_2BjD3N3Nz8B_OvjC7L3kCrE_TvC7QAvHwCnfAvH7BjInVr7B7GzUvCzFnB3DvvBkN3SgFnakIjN4DzZwH3hBoLvRsE3N4DzPsEjSsEvb4I_dsJnfkIzeoLnkBgKjXkI7V0F_dkIvW0FriBoLrT8GwC_OsEzZsEnakD3NoB7LwCr2BUjkCvH36BTzF7BjNnBvH3I7zBvCjNnB7G7GjrB_E_YnG_dnLrxB7GvgBrJ36BrnBkI_dwH_T0F79B0P3zCkXriBsJzKwCnQsE7G8B_EoBzjBsJzjBsJrTgFrxBwM3wBwMnV0FnkB4IzUoGvH8BvH8BnV8GzP4Dn4BkNjX4IrnBwH_nB4Nv0BkNnfkIrnBoLjmBkIzoBgKzZoGzoB0KnV0F31BoQnkB0KvjC8QnawH7a8GvqBoLnfgK3SgFjmBsJ_YwH31BkNvCjS_E3hBzFvlB7BrOjDrT7B3N7BnVjN8B_dkDrYwCzPoBnL8B3SAwMzmCsEzUU3DoBrEgK3hB8B_EwCvHoBjDkN3mBwHrT8B_EsEvMkDjNwCzKwCnQoBvM8BzUTnLvCzK7B3DnGnG3IwCnLUjmBwCztBwC_iBwCv0BsEriBkDvtCgK_5CoLvHoB7iC4InzBwHrYwCr-CwM3XkDjmBgF_dsE_JoB7VkDjSwCvlB4DvoC0KnzB8G_sBoGvqB0FvlBoG7VkD7kB4D_d4Dnf4DjhBkD3c4D7uBsEvMoBvqBgFvmD0KtU-B",
@@ -2348,8 +2348,8 @@
                       }
                   },
                   "summary": {
-                      "duration": 1049,
-                      "length": 7011,
+                      "duration": 5,
+                      "length": 2011,
                       "baseDuration": 792
                   },
                   "polyline": "BGtr48_B5sv3mE1oC6Gv8C4IzZwCAjX3mBjDA4SjhB0FAsJoB4IsEgK8iCnG8avCo2C3I0_C3IoBgZUgP8BkXoBkSoB4S8B0UwCkmBwCsiBAkcAwCoB4NoBoQ8BsdoB8aoB0PoB4NwC0e8BkcUkNAgPU0F8BgZoB8LoB4NUsEUkNU0PwCwgB8BgjBoGgwCwC4SvCwHAkSAkIUgFAgFwHnB0UrE0K7BsJ7B0ZzFsOjDwMvCwgB7GsxBzK8LvCoVrEkc7GwRrEwHT8QrE4S3DkS3D4S3DkXjIoQjIoLnG8Q7G0P3DkXnB8V7BsEA0ZnB4rBvCAsOTgPTsOA4NToaAoaAwbUoaAkNA4NAoaAsOAkNU8aAwbAsOA0PgK7Bof7GozBzKwH7BoLjDkXzFsqCnQgrCvRgFokBsEgewC8QoBgFkDoG4mBgPvM0tBnQo4BjIkcjNgtBnG0UvR4_BoBoGwC8GkD0FkIwH0FsE8G4DkN3D4SzFwHjD4SvHkNvHgKzF8GrEwMvMoL_OgZvW8L_JgZ3SsOnGojE_iBgPrEsJvCkN3D0jBzKgUrEkhB3IsdvH0e3IsiBrJwH7BkI7Bs0CrYsyD3coGkqEoB4SoBwRUwRU0KU0P8BouB4Dk6BUsO8BsnBkD0jBwCgyBjD8GzF0tBG0S",
@@ -4113,7 +4113,7 @@
                   },
                   "summary": {
                       "duration": 878,
-                      "length": 8111,
+                      "length": 7842,
                       "baseDuration": 688
                   },
                   "polyline": "BGpnk7_B72-1mEOskBrdoBv_DsJzUoBztB4DzFAnGUjNoB3rBsE7VoBvgBwCjNoBnLUrJUnVoB_lCgF79B4D7iCgF_sBkDvRoB_OwCvM0FvW8Q7G8GnG4D_EgFnLsEnL4Dvb8BrT8B3XwCvtCkIzekD_nB4DvbAzPU7BnQnBzPT3ITrEjDrdvC3cnB7anBjcnBnQnBnQ7BzPrEvgB7B3N3Dna7B3NjDnavC7QnB_JnB_J_EvH3IoB3XwHzZ0F_iBkI3NgFrOgFrd0F7aoGjzCkS3X0F3mBkIriBwHvbgF7LwC7kB8GvjCoQvgBoGzZ0FzZgF_JwCztB4IjXgFj1B8Lv0B4I3pC8QnxCsTjXoGvWoGnLwC3XwH7LrEvC7BzFrErE7G_ErJoBrOUvMwCzU8BjhBwCzUoBjXwC_iBUjIU3XkDrnBUrO8B_nBUnVU_O8BvgBoB_OoBrOoBnV8BrYoB3XwCvlB8BrdoBvWkDnzBkDrsBoB3X8Bjc8B7VAvHA_EArJUvWkD3rB8Bvb8B3X8B7V4D_iBwCzjB8BjhB8BrdwC7foBzeoBjXAzKA3NUzoBA_OTriBTrnBA7BA7LA3NTrdTz8BvC7a7BrxBU31BUnLUrJ4S72CsEjS8G_iB8G7fwH3hBwHvlB4I_nBkI7kB4IjmB4IrnB4InkB8G_dkNj6BwC7L4N79BkNr7BoL_xB0FjckInkBkNv-BwMrxB4S7sCoG7V0FrOsEnLwCrJkIjX",

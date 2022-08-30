@@ -172,7 +172,7 @@ module HereV8
         order_array = response.route_legs.map do |leg|
           leg.origin_waypoint.original_order
         end
-        assert_equal [0, 7, 6, 4, 3, 2, 1, 5], order_array
+        assert_equal [0, 1, 3, 2, 4, 6, 5, 7], order_array
       end
     end
   end
