@@ -1,6 +1,7 @@
 require 'route_directions/responses/base'
 require 'route_directions/responses/route_leg'
 require 'route_directions/errors'
+require 'route_directions/decoders/here_v8'
 require 'json'
 
 module RouteDirections
@@ -50,7 +51,7 @@ module RouteDirections
         leg = RouteLeg.new(
           leg_json['summary']['length'],
           leg_json['summary']['duration'],
-          decode_polyline(leg_json['polyline'])
+          Decoders::HereV8.new(leg_json['polyline']).decode
         )
         add_waypoints_to_route_leg(leg, index, nil)
       end
