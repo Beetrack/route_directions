@@ -18,7 +18,6 @@ module RouteDirections
       private
 
       def request(origin, waypoints, destination)
-        @waypoints = waypoints
         Request.new(
           provider_url,
           parameters(origin, waypoints, destination),
@@ -31,14 +30,8 @@ module RouteDirections
         if options[:optimize]
           'https://wse.ls.hereapi.com/2/findsequence.json'
         else
-          'https://router.hereapi.com/v8/routes' + vias_parameter
+          'https://router.hereapi.com/v8/routes'
         end
-      end
-
-      def vias_parameter
-        return '' if waypoints.nil? || waypoints.empty?
-
-        '?' + @waypoints.map { |point| "via=#{waypoint_parser(*point)}" }.join('&')
       end
 
       def parameters(origin, waypoints, destination)
@@ -76,6 +69,7 @@ module RouteDirections
         else
           params[:origin] = waypoint_parser(*origin)
           params[:destination] = waypoint_parser(*destination)
+          params[:via] = waypoints.map { |point| waypoint_parser(*point) }
         end
 
         params

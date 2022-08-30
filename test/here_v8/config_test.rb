@@ -12,7 +12,7 @@ module HereV8
     end
 
     def test_provider_url
-      assert_equal 'https://router.hereapi.com/v8/routes?via=38.891494,-77.074785', @here.send(:provider_url)
+      assert_equal 'https://router.hereapi.com/v8/routes', @here.send(:provider_url)
     end
 
     def test_parameters
