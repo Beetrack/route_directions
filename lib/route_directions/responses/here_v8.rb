@@ -41,17 +41,18 @@ module RouteDirections
         @time += route_body['sections'].sum { |section| section['summary']['duration'] }
         @distance += route_body['sections'].sum { |section| section['summary']['length'] }
         route_body['sections'].each_with_index do |leg_json, index|
-          @route_legs << process_legs(leg_json, index)
-          @polyline << decode_polyline(leg_json['polyline'])
+          polyline = Decoders::HereV8.new(leg_json['polyline']).decode
+          @route_legs << process_legs(leg_json, index, polyline)
+          @polyline << polyline
         end
         @statuses += ['OK']
       end
 
-      def process_legs(leg_json, index)
+      def process_legs(leg_json, index, polyline)
         leg = RouteLeg.new(
           leg_json['summary']['length'],
           leg_json['summary']['duration'],
-          Decoders::HereV8.new(leg_json['polyline']).decode
+          polyline
         )
         add_waypoints_to_route_leg(leg, index, nil)
       end
