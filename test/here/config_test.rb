@@ -4,8 +4,7 @@ require 'route_directions/clients/here'
 module Here
   class ConfigTest < Minitest::Test
     def setup
-      RouteDirections.configure(key: 'some api key',
-                                provider: 'Here')
+      RouteDirections.configure(key: 'some api key', provider: 'Here')
       @origin = [38.920554, -77.029094]
       @destination = [38.851339, -77.137241]
       @options = {

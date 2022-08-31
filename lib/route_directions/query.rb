@@ -1,5 +1,5 @@
 require 'route_directions/configuration'
-%w[google osrm here].each do |client|
+%w[google osrm here here_v8].each do |client|
   require "route_directions/clients/#{client}"
 end
 require 'date'

@@ -84,13 +84,16 @@ module RouteDirections
         order = waypoint_order_by_index(index)
         origin_order = waypoint_new_order_by_index(index, waypoints_json)
         destination_order = waypoint_new_order_by_index(index + 1, waypoints_json)
+
         route_leg.origin_waypoint = {
           origin_waypoint: waypoint_by_index(origin_order),
-          original_order: origin_order, current_order: order
+          original_order: origin_order,
+          current_order: order
         }
         route_leg.destination_waypoint = {
           destination_waypoint: waypoint_by_index(destination_order),
-          original_order: destination_order, current_order: order + 1
+          original_order: destination_order,
+          current_order: order + 1
         }
         route_leg
       end
@@ -100,8 +103,7 @@ module RouteDirections
       end
 
       def waypoint_order_by_index(index)
-        @current_iteration * (@client_context.max_waypoints + 1) +
-          index
+        @current_iteration * (@client_context.max_waypoints + 1) + index
       end
 
       def all_waypoints

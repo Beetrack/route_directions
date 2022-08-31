@@ -1,0 +1,101 @@
+{
+    "results": [
+        {
+            "waypoints": [
+                {
+                    "id": "start",
+                    "lat": -33.43212,
+                    "lng": -70.59446,
+                    "sequence": 0,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": null,
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination2",
+                    "lat": -33.50081,
+                    "lng": -70.61685,
+                    "sequence": 1,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": null,
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination1",
+                    "lat": -33.49337,
+                    "lng": -70.67625,
+                    "sequence": 2,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": null,
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "destination3",
+                    "lat": -33.48292,
+                    "lng": -70.69633,
+                    "sequence": 3,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": null,
+                    "fulfilledConstraints": []
+                },
+                {
+                    "id": "end",
+                    "lat": -33.46478,
+                    "lng": -70.62882,
+                    "sequence": 4,
+                    "estimatedArrival": null,
+                    "estimatedDeparture": null,
+                    "fulfilledConstraints": []
+                }
+            ],
+            "distance": "28069",
+            "time": "2599",
+            "interconnections": [
+                {
+                    "fromWaypoint": "start",
+                    "toWaypoint": "destination2",
+                    "distance": 9867.0,
+                    "time": 974.0,
+                    "rest": 0.0,
+                    "waiting": 0.0
+                },
+                {
+                    "fromWaypoint": "destination2",
+                    "toWaypoint": "destination1",
+                    "distance": 7593.0,
+                    "time": 622.0,
+                    "rest": 0.0,
+                    "waiting": 0.0
+                },
+                {
+                    "fromWaypoint": "destination1",
+                    "toWaypoint": "destination3",
+                    "distance": 2365.0,
+                    "time": 213.0,
+                    "rest": 0.0,
+                    "waiting": 0.0
+                },
+                {
+                    "fromWaypoint": "destination3",
+                    "toWaypoint": "end",
+                    "distance": 8244.0,
+                    "time": 790.0,
+                    "rest": 0.0,
+                    "waiting": 0.0
+                }
+            ],
+            "description": "Targeted best BASETIME; without traffic",
+            "timeBreakdown": {
+                "driving": 2599,
+                "service": 0,
+                "rest": 0,
+                "waiting": 0
+            }
+        }
+    ],
+    "errors": [],
+    "processingTimeDesc": "282ms",
+    "responseCode": "200",
+    "warnings": null,
+    "requestId": null
+}
