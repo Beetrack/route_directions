@@ -38,6 +38,8 @@ module RouteDirections
       end
 
       def process_valid(route_body)
+        return if route_body.blank?
+
         @time += route_body['sections'].sum { |section| section['summary']['duration'] }
         @distance += route_body['sections'].sum { |section| section['summary']['length'] }
         route_body['sections'].each_with_index do |leg_json, index|
