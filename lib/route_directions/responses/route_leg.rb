@@ -29,6 +29,8 @@ module RouteDirections
       private
 
       def create_waypoint(waypoint, original_order, current_order)
+        return if waypoint.blank?
+        
         OpenStruct.new(
           latitude: waypoint[0],
           longitude: waypoint[1],
