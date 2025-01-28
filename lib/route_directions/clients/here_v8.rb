@@ -28,7 +28,7 @@ module RouteDirections
 
       def provider_url
         if options[:optimize]
-          'https://wse.ls.hereapi.com/2/findsequence.json'
+          'https://www.here.com/docs/category/waypoints-sequence-api-v8'
         else
           'https://router.hereapi.com/v8/routes'
         end
