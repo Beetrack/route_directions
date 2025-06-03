@@ -35,17 +35,29 @@ module RouteDirections
       end
 
       def parameters(origin, waypoints, destination)
-        params = {
-          transportMode: 'car',
-          routingMode: 'fast'
-        }
+        if options[:optimize]
+          params = {
+            mode: "fastest;car;traffic:enabled",
+            improveFor: "time"
+          }
 
-        params.merge!(spans: 'length')
-        params.merge!(return: 'summary,polyline')
-        params.merge!(auth_params)
-        params.merge!(waypoints_params(origin, waypoints, destination))
-        params.merge!(departure_time_params)
-        params
+          params.merge!(waypoints_params(origin, waypoints, destination))
+          params.merge!(departure_time_params)
+          params.merge!(auth_params)
+          params
+        else
+          params = {
+            transportMode: 'car',
+            routingMode: 'fast'
+          }
+
+          params.merge!(spans: 'length')
+          params.merge!(return: 'summary,polyline')
+          params.merge!(auth_params)
+          params.merge!(waypoints_params(origin, waypoints, destination))
+          params.merge!(departure_time_params)
+          params
+        end
       end
 
       def auth_params
@@ -89,10 +101,15 @@ module RouteDirections
               else
                 Time.parse(partial_time.to_s)
               end
-
-        {
-          departureTime: time.strftime('%FT%T%:z')
-        }
+        if options[:optimize]
+          {
+            departure: time.strftime('%FT%T%:z')
+          }
+        else
+          {
+            departureTime: time.strftime('%FT%T%:z')
+          }
+        end
       end
 
       def abort?(response)
