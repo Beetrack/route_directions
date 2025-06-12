@@ -28,36 +28,24 @@ module RouteDirections
 
       def provider_url
         if options[:optimize]
-          'https://wps.hereapi.com/v8/findsequence2'
+          'https://router.hereapi.com/v8/routes'
         else
           'https://router.hereapi.com/v8/routes'
         end
       end
 
       def parameters(origin, waypoints, destination)
-        if options[:optimize]
-          params = {
-            mode: "fastest;car;traffic:enabled",
-            improveFor: "time"
-          }
+        params = {
+          transportMode: 'car',
+          routingMode: 'fast'
+        }
 
-          params.merge!(waypoints_params(origin, waypoints, destination))
-          params.merge!(departure_time_params)
-          params.merge!(auth_params)
-          params
-        else
-          params = {
-            transportMode: 'car',
-            routingMode: 'fast'
-          }
-
-          params.merge!(spans: 'length')
-          params.merge!(return: 'summary,polyline')
-          params.merge!(auth_params)
-          params.merge!(waypoints_params(origin, waypoints, destination))
-          params.merge!(departure_time_params)
-          params
-        end
+        params.merge!(spans: 'length')
+        params.merge!(return: 'summary,polyline')
+        params.merge!(auth_params)
+        params.merge!(waypoints_params(origin, waypoints, destination))
+        params.merge!(departure_time_params)
+        params
       end
 
       def auth_params
