@@ -56,22 +56,9 @@ module RouteDirections
 
       def waypoints_params(origin, waypoints, destination)
         params = {}
-
-        if options[:optimize]
-          params[waypoint_name_param(0, waypoints)] = waypoint_parser(*origin)
-          params[waypoint_name_param(waypoints.size + 1, waypoints)] = waypoint_parser(*destination)
-
-          return params unless waypoints.any?
-
-          waypoints.each_with_index do |point, i|
-            params[waypoint_name_param(i + 1, waypoints)] = waypoint_parser(*point)
-          end
-        else
-          params[:origin] = waypoint_parser(*origin)
-          params[:destination] = waypoint_parser(*destination)
-          params[:via] = waypoints.map { |point| waypoint_parser(*point) }
-        end
-
+        params[:origin] = waypoint_parser(*origin)
+        params[:destination] = waypoint_parser(*destination)
+        params[:via] = waypoints.map { |point| waypoint_parser(*point) }
         params
       end
 
@@ -89,15 +76,7 @@ module RouteDirections
               else
                 Time.parse(partial_time.to_s)
               end
-        if options[:optimize]
-          {
-            departure: time.strftime('%FT%T%:z')
-          }
-        else
-          {
-            departureTime: time.strftime('%FT%T%:z')
-          }
-        end
+          { departureTime: time.strftime('%FT%T%:z') }
       end
 
       def abort?(response)

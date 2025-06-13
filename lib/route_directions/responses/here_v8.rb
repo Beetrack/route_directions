@@ -11,11 +11,7 @@ module RouteDirections
 
       def process_response
         body = JSON.parse(@http_response.body)
-        if optimize?
-          process_valid_optimized(body['results'][0])
-        else
-          process_valid(body['routes'][0])
-        end
+        process_valid(body['routes'][0])
       end
 
       def process_valid_optimized(response_body)
@@ -60,7 +56,7 @@ module RouteDirections
       end
 
       def waypoint_new_order_by_index(index, waypoints_json)
-        return waypoint_order_by_index(index) unless optimize?
+        return waypoint_order_by_index(index)
 
         waypoint_id = waypoints_json[index]['id']
         original_index = case waypoint_id
