@@ -36,7 +36,7 @@ module RouteDirections
 
       def parameters(origin, waypoints, destination)
         params = {
-          transportMode: 'car',
+          transportMode: 'truck',
           routingMode: 'fast'
         }
 
