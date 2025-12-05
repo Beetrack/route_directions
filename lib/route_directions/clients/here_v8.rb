@@ -58,7 +58,11 @@ module RouteDirections
         params = {}
         params[:origin] = waypoint_parser(*origin)
         params[:destination] = waypoint_parser(*destination)
-        params[:via] = waypoints.map { |point| waypoint_parser(*point) }
+        service_times = options[:service_times] || []
+        params[:via] = waypoints.each_with_index.map do |point, index|
+          service_time = service_times[index]
+          waypoint_parser(*point, service_time)
+        end
         params
       end
 
@@ -83,8 +87,10 @@ module RouteDirections
         ['REQUEST_DENIED'].include? response['status']
       end
 
-      def waypoint_parser(latitude, longitude)
-        "#{latitude},#{longitude}"
+      def waypoint_parser(latitude, longitude, service_time=nil)
+        waypoint = "#{latitude},#{longitude}"
+        waypoint += "!stopDuration=#{service_time.to_i}" if service_time
+        waypoint
       end
 
       def max_tries
